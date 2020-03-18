@@ -175,7 +175,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			fg=api.getForegroundObject().parent
 			fgp=fg.appModule
 		except:
-			ui.message("Can't retrieve window information for this object.")
+			ui.message(_("Can't retrieve window information for this object."))
 		try:
 			if not fg.simplePrevious.appModule==fgp:
 				if fg.simpleNext.appModule==fgp:
@@ -184,12 +184,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				if fg.simplePrevious.appModule==fgp:
 					nwp=fg.simplePrevious
 		except AttributeError:
-			ui.message("This is not a valid window. You are probably on the desktop or the start button.")
+			ui.message(_("This is not a valid window. You are probably on the desktop or the start button."))
 			pass
 		if nwn==0 and nwp==0:
-			ui.message("This window has no top level windows to cycle to.")
+			ui.message(_("This window has no top level windows to cycle to."))
 		elif not nwn==0 and not nwp==0:
-			ui.message("Multiple top level windows detected.")
+			ui.message(_("Multiple top level windows detected."))
 		elif not nwn==0:
 			clickWindow(nwn)
 		elif not nwp==0:
