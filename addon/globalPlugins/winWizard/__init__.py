@@ -108,7 +108,6 @@ def hidewindow(num):
 		temp.append(num)
 		hidden[num]=temp
 		beep(80,80)
-		pass
 	savelist()
 def clickWindow(object):
 	object.setFocus()
@@ -185,7 +184,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 					nwp=fg.simplePrevious
 		except AttributeError:
 			ui.message(_("This is not a valid window. You are probably on the desktop or the start button."))
-			pass
 		if nwn==0 and nwp==0:
 			ui.message(_("This window has no top level windows to cycle to."))
 		elif not nwn==0 and not nwp==0:
