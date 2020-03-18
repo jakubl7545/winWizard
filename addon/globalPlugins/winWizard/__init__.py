@@ -1,3 +1,7 @@
+# WinWizard add-on for NVDA
+#This file is covered by the GNU General Public License.
+#See the file COPYING.txt for more details.
+#Copyright (C) 2020 Oriol Gomez <ogomez.s92@gmail.com>
 from builtins import str
 from builtins import range
 import ui
