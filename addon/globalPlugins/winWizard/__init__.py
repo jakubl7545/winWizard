@@ -1,3 +1,7 @@
+# WinWizard add-on for NVDA
+#This file is covered by the GNU General Public License.
+#See the file COPYING.txt for more details.
+#Copyright (C) 2020 Oriol Gomez <ogomez.s92@gmail.com>
 from builtins import str
 from builtins import range
 import ui
@@ -67,7 +71,7 @@ def savelist():
 	global hidden,stack
 	f = getFileWrite()
 	pickle.dump(hidden,f)
-	f.close
+	f.close()
 def hidewindow(num):
 	global hidden,lastHidden,stack
 	num=num+(stack*10)
@@ -108,7 +112,6 @@ def hidewindow(num):
 		temp.append(num)
 		hidden[num]=temp
 		beep(80,80)
-		pass
 	savelist()
 def clickWindow(object):
 	object.setFocus()
@@ -175,7 +178,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			fg=api.getForegroundObject().parent
 			fgp=fg.appModule
 		except:
-			ui.message("Can't retrieve window information for this object.")
+			ui.message(_("Can't retrieve window information for this object."))
 		try:
 			if not fg.simplePrevious.appModule==fgp:
 				if fg.simpleNext.appModule==fgp:
@@ -184,12 +187,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				if fg.simplePrevious.appModule==fgp:
 					nwp=fg.simplePrevious
 		except AttributeError:
-			ui.message("This is not a valid window. You are probably on the desktop or the start button.")
-			pass
+			ui.message(_("This is not a valid window. You are probably on the desktop or the start button."))
 		if nwn==0 and nwp==0:
-			ui.message("This window has no top level windows to cycle to.")
+			ui.message(_("This window has no top level windows to cycle to."))
 		elif not nwn==0 and not nwp==0:
-			ui.message("Multiple top level windows detected.")
+			ui.message(_("Multiple top level windows detected."))
 		elif not nwn==0:
 			clickWindow(nwn)
 		elif not nwp==0:
