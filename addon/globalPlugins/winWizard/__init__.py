@@ -67,7 +67,7 @@ def savelist():
 	global hidden,stack
 	f = getFileWrite()
 	pickle.dump(hidden,f)
-	f.close
+	f.close()
 def hidewindow(num):
 	global hidden,lastHidden,stack
 	num=num+(stack*10)
