@@ -14,12 +14,16 @@ addon_info = {
 	"addon_name" : "winWizard",
 	# Add-on summary, usually the user visible name of the addon.
 	# Translators: Summary for this add-on to be shown on installation and add-on information.
-	"addon_summary" : _("winWizard: Show and hide windows, browse windows of the same process, kill processes"),
+	"addon_summary": _("Win Wizard"),
 	# Add-on description
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-	"addon_description" : _("""This addon allows you to hide windows (windows shift and numbers). Also, allows exploration of top level windows (windows+tab), and kill a non responding process with windows f4."""),
+	"addon_description": _(
+		"""This addon allows you to hide windows (NVDA shift and numbers).
+Also, allows exploration of top level windows (windows+NVDA+tab),
+and kill a non responding process with windows f4."""
+	),
 	# version
-	"addon_version" : "4.0.0",
+	"addon_version" : "5.0.0",
 	# Author(s)
 	"addon_author" : u"Oriol Gomez <ogomez.s92@gmail.com>",
 	# URL for the add-on documentation support
@@ -29,7 +33,7 @@ addon_info = {
 	# Minimum NVDA version supported (e.g. "2018.3.0", minor version is optional)
 	"addon_minimumNVDAVersion" : "2019.3.0",
 	# Last NVDA version supported/tested (e.g. "2018.4.0", ideally more recent than minimum version)
-	"addon_lastTestedNVDAVersion" : "2019.3.1",
+	"addon_lastTestedNVDAVersion": "2020.2.0",
 	# Add-on update channel (default is None, denoting stable releases, and for development releases, use "dev"; do not change unless you know what you are doing)
 	"addon_updateChannel" : None,
 }
@@ -39,7 +43,7 @@ import os.path
 
 # Define the python files that are the sources of your add-on.
 # You can use glob expressions here, they will be expanded.
-pythonSources = []
+pythonSources = ["addon/*/*.py"]
 
 # Files that contain strings for translation. Usually your python sources
 i18nSources = pythonSources + ["buildVars.py"]
