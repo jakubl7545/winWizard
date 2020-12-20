@@ -1,6 +1,6 @@
 # Win Wizard
 
-* Author: Oriol Gómez
+* Author: Oriol Gómez, current maintenance by Łukasz Golonka
 * NVDA compatibility: 2019.3 and beyond
 
 This add-on allows you to perform some operations on the focused window or the process associated with it.
@@ -22,3 +22,8 @@ This add-on allows you to perform some operations on the focused window or the p
 * NVDA+Shift+TAB - switches between top level windows of the current program (useful in foobar2000, Back4Sure etc.)
 * CTRL+ALT+T - allows you to change title of the currently focused program
 
+## Changes:
+
+## Changes for 5.0.0:
+
+- First release available from the add-ons website
