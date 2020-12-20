@@ -2,6 +2,7 @@
 # This file is covered by the GNU General Public License.
 # See the file COPYING.txt for more details.
 # Copyright (C) 2020 Oriol Gomez <ogomez.s92@gmail.com>
+# Currently maintained by Łukasz Golonka <lukasz.golonka@mailbox.org>
 
 import collections
 from dataclasses import dataclass, field
