@@ -24,6 +24,6 @@ This add-on allows you to perform some operations on the focused window or the p
 
 ## Changes:
 
-## Changes for 5.0.0:
+## Changes for 5.0.1:
 
 - First release available from the add-ons website
