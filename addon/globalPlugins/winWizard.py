@@ -41,7 +41,7 @@ class stack:
 
 	def __str__(self):
 		# Translators: Name of the stack shown in the dialog - for example Stack 1.
-		return _("Stack {}".format(self.stackNumber))
+		return _("Stack {}").format(self.stackNumber)
 
 	@property
 	def numbers(self):
@@ -344,7 +344,7 @@ class windowWithHandle:
 
 	def __str__(self):
 		# Translators: Text describing hidden window. For example: "Untitled -  notepad from process notepad.exe"
-		return _("{} from process {}".format(self.windowTitle, self.appName))
+		return _("{} from process {}").format(self.windowTitle, self.appName)
 
 	def setWindowText(self, text):
 		res = winUser.user32.SetWindowTextW(self.handle, text)
@@ -441,8 +441,7 @@ class process:
 
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
-
-	scriptCategory = "Win Wizard"
+	scriptCategory = _("Win Wizard")
 
 	def __init__(self):
 		super().__init__()
@@ -456,13 +455,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		del self.hiddenWindowsList
 
 	@scriptHandler.script(
-		description=_(
-			# Translators: Description of the keyboard command
-			# allowing to jump between top-level windows of the current application.
-			"Jumps between top-level windows of the current application."
-		),
+			# Translators: Description of the keyboard command that allowing to jump between top-level windows of the current application.
+		description=_("Jumps between top-level windows of the current application."),
 		gesture="kb:NVDA+windows+Tab",
-		category=SCRCAT_FOCUS,
+#		category=SCRCAT_FOCUS,
 	)
 	def script_cycleWindows(self, gesture):
 		if(
@@ -590,22 +586,22 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			self._hideInSlot(winNumber)
 
 	@scriptHandler.script(
-		# Translators: Description of the keyboard command.
+		# Translators: Description of the keyboard command that Goes to the previous stack.
 		description=_("Goes to the previous stack"),
 		gesture="kb:windows+NVDA+leftArrow",
 	)
 	def script_previousStack(self, gesture):
 		# Translators: Message announced when user switches to another stack.
-		ui.message(_("Stack {}".format(self.hiddenWindowsList.previousStack() + 1)))
+		ui.message(_("Stack {}").format(self.hiddenWindowsList.previousStack() + 1))
 
 	@scriptHandler.script(
-		# Translators: Description of the keyboard command.
+		# Translators: Description of the keyboard command that Goes to the next stack.
 		description=_("Goes to the next stack"),
 		gesture="kb:windows+NVDA+rightArrow",
 	)
 	def script_nextStack(self, gesture):
 		# Translators: Announced when user switches to  another stack.
-		ui.message(_("Stack {}".format(self.hiddenWindowsList.nextStack() + 1)))
+		ui.message(_("Stack {}").format(self.hiddenWindowsList.nextStack() + 1))
 
 	@scriptHandler.script(
 		# Translators: Description of the keyboard command.
