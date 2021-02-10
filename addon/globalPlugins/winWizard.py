@@ -1,3 +1,5 @@
+# -*- coding: UTF-8 -*-
+
 # WinWizard add-on for NVDA
 # This file is covered by the GNU General Public License.
 # See the file COPYING.txt for more details.
@@ -41,7 +43,7 @@ class stack:
 
 	def __str__(self):
 		# Translators: Name of the stack shown in the dialog - for example Stack 1.
-		return _("Stack {}".format(self.stackNumber))
+		return _("Stack {}").format(self.stackNumber)
 
 	@property
 	def numbers(self):
@@ -62,7 +64,7 @@ class hiddenWindow:
 
 	def __str__(self):
 		# Translators: Text of the  entry for the hidden window in the hidden windows tree.
-		return _("{}: {}".format(self.presentationalNumber, self.textualRepresentation))
+		return _("{}: {}").format(self.presentationalNumber, self.textualRepresentation)
 
 	@property
 	def numbers(self):
@@ -344,7 +346,7 @@ class windowWithHandle:
 
 	def __str__(self):
 		# Translators: Text describing hidden window. For example: "Untitled -  notepad from process notepad.exe"
-		return _("{} from process {}".format(self.windowTitle, self.appName))
+		return _("{} from process {}").format(self.windowTitle, self.appName)
 
 	def setWindowText(self, text):
 		res = winUser.user32.SetWindowTextW(self.handle, text)
@@ -596,7 +598,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	)
 	def script_previousStack(self, gesture):
 		# Translators: Message announced when user switches to another stack.
-		ui.message(_("Stack {}".format(self.hiddenWindowsList.previousStack() + 1)))
+		ui.message(_("Stack {}").format(self.hiddenWindowsList.previousStack() + 1))
 
 	@scriptHandler.script(
 		# Translators: Description of the keyboard command.
@@ -605,7 +607,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	)
 	def script_nextStack(self, gesture):
 		# Translators: Announced when user switches to  another stack.
-		ui.message(_("Stack {}".format(self.hiddenWindowsList.nextStack() + 1)))
+		ui.message(_("Stack {}").format(self.hiddenWindowsList.nextStack() + 1))
 
 	@scriptHandler.script(
 		# Translators: Description of the keyboard command.
