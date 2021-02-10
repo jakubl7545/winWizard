@@ -6,6 +6,7 @@
 This add-on allows you to perform some operations on the focused window or the process associated with it.
 
 ## Keyboard commands:
+All these commands can be remapped from the Input gestures dialog in the Win Wizard category.
 ### Hiding and showing hidden windows:
 * NVDA+Windows+numbers from 1 to 0 - hides  currently focused window in the slot corresponding to the pressed number
 * NVDA+Windows+left arrow - moves to the previous stack of hidden windows.
@@ -19,7 +20,7 @@ This add-on allows you to perform some operations on the focused window or the p
 * NVDA+Windows+p - opens dialog allowing you to set priority of the process associated with the currently focused window
 
 ### Miscellaneous  commands:
-* NVDA+Windows+TAB - switches between top level windows of the current program (useful in foobar2000, Back4Sure etc.)
+* NVDA+Windows+TAB - switches between top level windows of the current program (useful in foobar2000, Back4Sure etc.) Since this command moves the system focus it can be found in the System focus category of the Input gestures dialog.
 * CTRL+ALT+T - allows you to change title of the currently focused program
 
 ## Changes:
