@@ -444,7 +444,7 @@ class process:
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
-	scriptCategory = "Win Wizard"
+	scriptCategory = _("Win Wizard")
 
 	def __init__(self):
 		super().__init__()
