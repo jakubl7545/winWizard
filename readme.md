@@ -25,6 +25,10 @@ All these commands can be remapped from the Input gestures dialog in the Win Wiz
 
 ## Changes:
 
+## Changes for 5.0.3:
+
+- Compatibility with NVDA 2021.1
+
 ## Changes for 5.0.2:
 
 - First release available from the add-ons website
