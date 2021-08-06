@@ -1,0 +1,197 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 'winWizard' '5.0.1'\n"
+"Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
+"POT-Creation-Date: 2021-07-26 01:20+0800\n"
+"PO-Revision-Date: 2021-07-26 01:21+0800\n"
+"Last-Translator: \n"
+"Language-Team: Cary-Rowen <manchen_0528@outlook.com>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.3\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#. Translators: Name of the stack shown in the dialog - for example Stack 1.
+#. Translators: Message announced when user switches to another stack.
+#. Translators: Announced when user switches to  another stack.
+msgid "Stack {}"
+msgstr "分组 {}"
+
+#. Translators: Text of the  entry for the hidden window in the hidden windows tree.
+msgid "{}: {}"
+msgstr "{}: {}"
+
+#. Translators: title of the dialog.
+msgid "Change process priority"
+msgstr "更改进程优先级"
+
+#. Translators: Label for the group of radio buttons for choosing a process priority.
+msgid "Choose priority"
+msgstr "选择优先级"
+
+#. Translators: Label of the button which sets priority in the dialog.
+msgid "Change"
+msgstr "更改(&E)"
+
+#. Translators: Label for the button which  dismiss the dialog.
+msgid "Cancel"
+msgstr "取消(&C)"
+
+#. Translators: Title of the dialog.
+msgid "Hidden windows"
+msgstr "隐藏窗口"
+
+#. Translators: Label for the button which shows currently selected hidden window.
+msgid "Unhide"
+msgstr "显示(&D)"
+
+#. Translators: Label for the button which closes the dialog.
+msgid "Close"
+msgstr "关闭(&C)"
+
+#. Translators: Text describing hidden window. For example: "Untitled -  notepad from process notepad.exe"
+msgid "{} from process {}"
+msgstr "{} 来自进程 {}"
+
+#. Translators: Name of the process priority
+msgid "Idle"
+msgstr "空闲(&I)"
+
+#. Translators: Name of the process priority
+msgid "Below Normal"
+msgstr "低于正常(&B)"
+
+#. Translators: Name of the process priority
+msgid "Normal"
+msgstr "正常(&N)"
+
+#. Translators: Name of the process priority
+msgid "Above normal"
+msgstr "高于正常(&A)"
+
+#. Translators: Name of the process priority
+msgid "High"
+msgstr "高(&H)"
+
+#. Translators: Name of the process priority
+msgid "Real time"
+msgstr "实时(&R)"
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on
+#. to be shown on installation and add-on information found in Add-ons Manager.
+msgid "Win Wizard"
+msgstr "窗口管理"
+
+#. Translators: Description of the keyboard command
+#. allowing to jump between top-level windows of the current application.
+msgid "Jumps between top-level windows of the current application."
+msgstr "在顶层窗口之间跳转"
+
+#. Translators: Information given when user tries to move to top-level window in Windows  Explorer
+msgid "Not supported here."
+msgstr "在此处不支持"
+
+#. Translators: Announced when the current application has no top-level windows.
+msgid "This window has no top level windows to cycle to."
+msgstr "此窗口没有可循环跳转的顶层窗口。"
+
+#. Translators: Announced when current program has multiple top-level windows.
+msgid "Multiple top level windows detected."
+msgstr "存在多个顶层窗口。"
+
+#. Translators: Reported when informations for the current window cannot be retrieved.
+msgid "Can't retrieve window information for this object."
+msgstr "无法检索此对象的窗口信息。"
+
+#. Translators: Description of the keyboard command that kills currently focused process.
+msgid "Kills currently focused process."
+msgstr "结束当前程序"
+
+#. Translators: Announced when current process cannot be killed.
+msgid "Cannot kill the current process"
+msgstr "无法结束当前程序"
+
+#. Translators: Description of the keyboard command used to change title of the curently focused window.
+msgid "Opens a dialog allowing to change title of the current window"
+msgstr "打开更改当前窗口标题的对话框"
+
+#. Translators: Message in the dialog used to change title of the curently focused window.
+msgid "Enter the new title for this window:"
+msgstr "输入此窗口的新标题："
+
+#. Translators: Title of the dialog.
+msgid "Change window title"
+msgstr "更改窗口标题"
+
+#. Translators: Shown when changing of the current window title failed.
+msgid "Failed to change window title!"
+msgstr "更改窗口标题失败！"
+
+#. Translators: Title of the error dialog
+msgid "Error"
+msgstr "错误"
+
+#. Translators: Description of the keyboard command
+#. that opens dialog allowing to change priority of the currently focused program.
+msgid ""
+"Opens dialog used to change priority of the process of currently focused "
+"program."
+msgstr "打开更改当前进程优先级的对话框"
+
+#. Translators: Message informing user that the current window cannot be hidden.
+msgid "Cannot hide this window!"
+msgstr "无法隐藏此窗口！"
+
+#. Translators: Description of the keyboard command that shows or hides window at the current slot.
+msgid "Shows or hides window in the current slot."
+msgstr "隐藏或显示当前窗口至此位置"
+
+#. Translators: Description of the keyboard command.
+msgid "Goes to the previous stack"
+msgstr "上一个分组"
+
+#. Translators: Description of the keyboard command.
+msgid "Goes to the next stack"
+msgstr "下一个分组"
+
+#. Translators: Description of the keyboard command.
+msgid "Hides  current window in the first available slot"
+msgstr "隐藏当前窗口至第一个可用位置"
+
+#. Translators: Description of the keyboard command.
+msgid "Shows last hidden window"
+msgstr "显示最后一个被隐藏的窗口"
+
+#. Translators: Announced when user attempts to show last hidden window but history is empty.
+msgid "There is no window recorded as last hidden!"
+msgstr "没有上一个隐藏窗口！"
+
+#. Translators: Announced when user attempts to show last hidden window but it no loger exists.
+msgid "Window recorded as last hidden no longer exists!"
+msgstr "上次隐藏窗口的记录已丢失！"
+
+#. Translators: Description of the keyboard command
+#. that opens dialog allowing to unhide currently hidden windows.
+msgid "Opens dialog for unhiding currently hidden windows."
+msgstr "显示被隐藏窗口的对话框"
+
+#. Translators: Announced when user tries to display list of hidden windows but there are none hidden.
+msgid "There are no windows currently hidden."
+msgstr "目前没有被隐藏的窗口。"
+
+msgid ""
+"This addon allows you to hide windows (NVDA shift and numbers).\n"
+"Also, allows exploration of top level windows (windows+NVDA+tab),\n"
+"and kill a non responding process with windows f4."
+msgstr ""
+"这个插件可以让您使用 NVDA +Windows + 大键盘数字（1 至 0） 隐显窗口，用 "
+"Windows + NVDA + tab 循环切换顶层窗口，还可以使用 Windows + F4 结束一个无"
+"响应的程序。"

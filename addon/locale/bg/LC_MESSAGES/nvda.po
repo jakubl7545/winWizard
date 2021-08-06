@@ -1,0 +1,203 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the winWizard package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: winWizard 5.0.3\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
+"POT-Creation-Date: 2021-07-22 05:53+0000\n"
+"PO-Revision-Date: 2021-08-02 14:07+0300\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Kostadin Kolev <k_kolev1985@mail.bg>\n"
+"Language-Team: \n"
+"X-Generator: Poedit 3.0\n"
+
+#. Translators: Name of the stack shown in the dialog - for example Stack 1.
+#. Translators: Message announced when user switches to another stack.
+#. Translators: Announced when user switches to  another stack.
+msgid "Stack {}"
+msgstr "Комплект {}"
+
+#. Translators: Text of the  entry for the hidden window in the hidden windows tree.
+msgid "{}: {}"
+msgstr "{}: {}"
+
+#. Translators: title of the dialog.
+msgid "Change process priority"
+msgstr "Промяна на приоритета на процеса"
+
+#. Translators: Label for the group of radio buttons for choosing a process priority.
+msgid "Choose priority"
+msgstr "Избор на приоритет"
+
+#. Translators: Label of the button which sets priority in the dialog.
+msgid "Change"
+msgstr "Промени"
+
+#. Translators: Label for the button which  dismiss the dialog.
+msgid "Cancel"
+msgstr "Отказ"
+
+#. Translators: Title of the dialog.
+msgid "Hidden windows"
+msgstr "Скрити прозорци"
+
+#. Translators: Label for the button which shows currently selected hidden window.
+msgid "Unhide"
+msgstr "Покажи"
+
+#. Translators: Label for the button which closes the dialog.
+msgid "Close"
+msgstr "Затвори"
+
+#. Translators: Text describing hidden window. For example: "Untitled -  notepad from process notepad.exe"
+msgid "{} from process {}"
+msgstr "{} от процеса {}"
+
+#. Translators: Name of the process priority
+msgid "Idle"
+msgstr "Нисък"
+
+#. Translators: Name of the process priority
+msgid "Below Normal"
+msgstr "Под нормалното"
+
+#. Translators: Name of the process priority
+msgid "Normal"
+msgstr "Нормален"
+
+#. Translators: Name of the process priority
+msgid "Above normal"
+msgstr "Над нормалното"
+
+#. Translators: Name of the process priority
+msgid "High"
+msgstr "Висок"
+
+#. Translators: Name of the process priority
+msgid "Real time"
+msgstr "Реално време"
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on
+#. to be shown on installation and add-on information found in Add-ons Manager.
+msgid "Win Wizard"
+msgstr "Помощник за прозорците"
+
+#. Translators: Description of the keyboard command
+#. allowing to jump between top-level windows of the current application.
+msgid "Jumps between top-level windows of the current application."
+msgstr "Преминава между прозорци от най-горно ниво на текущото приложение."
+
+#. Translators: Information given when user tries to move to top-level window in Windows  Explorer
+msgid "Not supported here."
+msgstr "Не се поддържа тук."
+
+#. Translators: Announced when the current application has no top-level windows.
+msgid "This window has no top level windows to cycle to."
+msgstr ""
+"Този прозорец няма прозорци от най-горно ниво, към които да се преминава."
+
+#. Translators: Announced when current program has multiple top-level windows.
+msgid "Multiple top level windows detected."
+msgstr "Открити са множество прозорци от най-горно ниво."
+
+#. Translators: Reported when informations for the current window cannot be retrieved.
+msgid "Can't retrieve window information for this object."
+msgstr "Не може да се извлече информация за прозореца за този обект."
+
+#. Translators: Description of the keyboard command that kills currently focused process.
+msgid "Kills currently focused process."
+msgstr "Прекратява текущо фокусирания процес."
+
+#. Translators: Announced when current process cannot be killed.
+msgid "Cannot kill the current process"
+msgstr "Текущия процес не може да бъде прекратен"
+
+#. Translators: Description of the keyboard command used to change title of the curently focused window.
+msgid "Opens a dialog allowing to change title of the current window"
+msgstr ""
+"Отваря диалогов прозорец, позволяващ промяна на заглавието на текущия "
+"прозорец"
+
+#. Translators: Message in the dialog used to change title of the curently focused window.
+msgid "Enter the new title for this window:"
+msgstr "Въведете новото заглавие за този прозорец:"
+
+#. Translators: Title of the dialog.
+msgid "Change window title"
+msgstr "Промяна на заглавието на прозореца"
+
+#. Translators: Shown when changing of the current window title failed.
+msgid "Failed to change window title!"
+msgstr "Промяната на заглавието на прозореца не бе успешна!"
+
+#. Translators: Title of the error dialog
+msgid "Error"
+msgstr "Грешка"
+
+#. Translators: Description of the keyboard command
+#. that opens dialog allowing to change priority of the currently focused program.
+msgid ""
+"Opens dialog used to change priority of the process of currently focused "
+"program."
+msgstr ""
+"Отваря диалогов прозорец, позволяващ промяна на приоритета на процеса на "
+"текущо фокусираната програма."
+
+#. Translators: Message informing user that the current window cannot be hidden.
+msgid "Cannot hide this window!"
+msgstr "Този прозорец не може да бъде скрит!"
+
+#. Translators: Description of the keyboard command that shows or hides window at the current slot.
+msgid "Shows or hides window in the current slot."
+msgstr "Показва или скрива прозорец в текущия слот."
+
+#. Translators: Description of the keyboard command.
+msgid "Goes to the previous stack"
+msgstr "Преминава към предишния комплект"
+
+#. Translators: Description of the keyboard command.
+msgid "Goes to the next stack"
+msgstr "Преминава към следващия комплект"
+
+#. Translators: Description of the keyboard command.
+msgid "Hides  current window in the first available slot"
+msgstr "Скрива текущия прозорец в първия наличен слот"
+
+#. Translators: Description of the keyboard command.
+msgid "Shows last hidden window"
+msgstr "Показва последно скрития прозорец"
+
+#. Translators: Announced when user attempts to show last hidden window but history is empty.
+msgid "There is no window recorded as last hidden!"
+msgstr "Няма прозорец, записан като последно скрит!"
+
+#. Translators: Announced when user attempts to show last hidden window but it no loger exists.
+msgid "Window recorded as last hidden no longer exists!"
+msgstr "Прозорецът, записан като последно скрит, вече не съществува!"
+
+#. Translators: Description of the keyboard command
+#. that opens dialog allowing to unhide currently hidden windows.
+msgid "Opens dialog for unhiding currently hidden windows."
+msgstr ""
+"Отваря диалогов прозорец за показване на скрити в момента прозорци."
+
+#. Translators: Announced when user tries to display list of hidden windows but there are none hidden.
+msgid "There are no windows currently hidden."
+msgstr "В момента няма скрити прозорци."
+
+msgid ""
+"This addon allows you to hide windows (NVDA shift and numbers).\n"
+"Also, allows exploration of top level windows (windows+NVDA+tab),\n"
+"and kill a non responding process with windows f4."
+msgstr ""
+"Тази добавка ви позволява да скривате прозорци (NVDA+Shift+цифрите). \n"
+"Също така позволява изследване на прозорци от най-горно ниво (Windows"
+"+NVDA+TAB), \n"
+"както и прекратяването на нереагиращ процес, посредством Windows+F4."

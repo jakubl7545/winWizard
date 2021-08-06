@@ -1,0 +1,202 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the winWizard package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: winWizard\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
+"POT-Creation-Date: 2021-07-22 05:53+0000\n"
+"PO-Revision-Date: 2021-08-02 20:44+0200\n"
+"Last-Translator: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
+"Language-Team: fi_FI <janikinnunen340@gmail.com>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.11\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Translators: Name of the stack shown in the dialog - for example Stack 1.
+#. Translators: Message announced when user switches to another stack.
+#. Translators: Announced when user switches to  another stack.
+msgid "Stack {}"
+msgstr "Pino {}"
+
+#. Translators: Text of the  entry for the hidden window in the hidden windows tree.
+msgid "{}: {}"
+msgstr "{}: {}"
+
+#. Translators: title of the dialog.
+msgid "Change process priority"
+msgstr "Muuta prosessin prioriteettia"
+
+#. Translators: Label for the group of radio buttons for choosing a process priority.
+msgid "Choose priority"
+msgstr "Valitse prioriteetti"
+
+#. Translators: Label of the button which sets priority in the dialog.
+msgid "Change"
+msgstr "Muuta"
+
+#. Translators: Label for the button which  dismiss the dialog.
+msgid "Cancel"
+msgstr "Peruuta"
+
+#. Translators: Title of the dialog.
+msgid "Hidden windows"
+msgstr "Piilotetut ikkunat"
+
+#. Translators: Label for the button which shows currently selected hidden window.
+msgid "Unhide"
+msgstr "Näytä"
+
+#. Translators: Label for the button which closes the dialog.
+msgid "Close"
+msgstr "Sulje"
+
+#. Translators: Text describing hidden window. For example: "Untitled -  notepad from process notepad.exe"
+msgid "{} from process {}"
+msgstr "{} prosessista {}"
+
+#. Translators: Name of the process priority
+msgid "Idle"
+msgstr "Toimeton"
+
+#. Translators: Name of the process priority
+msgid "Below Normal"
+msgstr "Pienempi kuin normaali"
+
+#. Translators: Name of the process priority
+msgid "Normal"
+msgstr "Normaali"
+
+#. Translators: Name of the process priority
+msgid "Above normal"
+msgstr "Korkeampi kuin normaali"
+
+#. Translators: Name of the process priority
+msgid "High"
+msgstr "Korkea"
+
+#. Translators: Name of the process priority
+msgid "Real time"
+msgstr "Reaaliaikainen"
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on
+#. to be shown on installation and add-on information found in Add-ons Manager.
+msgid "Win Wizard"
+msgstr "Win Wizard"
+
+#. Translators: Description of the keyboard command
+#. allowing to jump between top-level windows of the current application.
+msgid "Jumps between top-level windows of the current application."
+msgstr "Siirtää ylätason ikkunoiden välillä nykyisessä sovelluksessa."
+
+#. Translators: Information given when user tries to move to top-level window in Windows  Explorer
+msgid "Not supported here."
+msgstr "Ei tueta tässä."
+
+#. Translators: Announced when the current application has no top-level windows.
+msgid "This window has no top level windows to cycle to."
+msgstr "Tässä sovelluksessa ei ole ylätason ikkunoita."
+
+#. Translators: Announced when current program has multiple top-level windows.
+msgid "Multiple top level windows detected."
+msgstr "Useita ylätason ikkunoita havaittu."
+
+#. Translators: Reported when informations for the current window cannot be retrieved.
+msgid "Can't retrieve window information for this object."
+msgstr "Tämän objektin ikkunatietoja ei voi noutaa"
+
+#. Translators: Description of the keyboard command that kills currently focused process.
+msgid "Kills currently focused process."
+msgstr "Tappaa aktiivisena olevan prosessin."
+
+#. Translators: Announced when current process cannot be killed.
+msgid "Cannot kill the current process"
+msgstr "Nykyistä prosessia ei voi tappaa"
+
+#. Translators: Description of the keyboard command used to change title of the curently focused window.
+msgid "Opens a dialog allowing to change title of the current window"
+msgstr "Avaa valintaikkunan, jossa voi muuttaa nykyisen ikkunan otsikkoa."
+
+#. Translators: Message in the dialog used to change title of the curently focused window.
+msgid "Enter the new title for this window:"
+msgstr "Anna tämän ikkunan uusi nimi:"
+
+#. Translators: Title of the dialog.
+msgid "Change window title"
+msgstr "Muuta ikkunan otsikkoa"
+
+#. Translators: Shown when changing of the current window title failed.
+msgid "Failed to change window title!"
+msgstr "Ikkunan otsikon muuttaminen epäonnistui."
+
+#. Translators: Title of the error dialog
+msgid "Error"
+msgstr "Virhe"
+
+#. Translators: Description of the keyboard command
+#. that opens dialog allowing to change priority of the currently focused program.
+msgid ""
+"Opens dialog used to change priority of the process of currently focused "
+"program."
+msgstr ""
+"Avaa valintaikkunan, jota käytetään aktiivisena olevan sovelluksen prosessin "
+"prioriteetin muuttamiseen."
+
+#. Translators: Message informing user that the current window cannot be hidden.
+msgid "Cannot hide this window!"
+msgstr "Tätä ikkunaa ei voi piilottaa."
+
+#. Translators: Description of the keyboard command that shows or hides window at the current slot.
+msgid "Shows or hides window in the current slot."
+msgstr "Näyttää tai piilottaa ikkunan nykyisessä paikassa."
+
+#. Translators: Description of the keyboard command.
+msgid "Goes to the previous stack"
+msgstr "Siirtää edelliseen pinoon."
+
+#. Translators: Description of the keyboard command.
+msgid "Goes to the next stack"
+msgstr "Siirtää seuraavaan pinoon."
+
+#. Translators: Description of the keyboard command.
+msgid "Hides  current window in the first available slot"
+msgstr ""
+"Piilottaa nykyisen ikkunan ensimmäiseen käytettävissä olevaan paikkaan."
+
+#. Translators: Description of the keyboard command.
+msgid "Shows last hidden window"
+msgstr "Näyttää viimeksi piilotetun ikkunan."
+
+#. Translators: Announced when user attempts to show last hidden window but history is empty.
+msgid "There is no window recorded as last hidden!"
+msgstr "Viimeksi piilotettua ikkunaa ei ole."
+
+#. Translators: Announced when user attempts to show last hidden window but it no loger exists.
+msgid "Window recorded as last hidden no longer exists!"
+msgstr "Viimeksi piilotettua ikkunaa ei enää ole."
+
+#. Translators: Description of the keyboard command
+#. that opens dialog allowing to unhide currently hidden windows.
+msgid "Opens dialog for unhiding currently hidden windows."
+msgstr ""
+"Avaa valintaikkunan, jota käytetään tällä hetkellä piilotettuina olevien "
+"ikkunoiden näyttämiseen."
+
+#. Translators: Announced when user tries to display list of hidden windows but there are none hidden.
+msgid "There are no windows currently hidden."
+msgstr "Piilotettuja ikkunoita ei ole."
+
+msgid ""
+"This addon allows you to hide windows (NVDA shift and numbers).\n"
+"Also, allows exploration of top level windows (windows+NVDA+tab),\n"
+"and kill a non responding process with windows f4."
+msgstr ""
+"Tämän lisäosan avulla voit piilottaa ikkunoita (NVDA+Vaihto+numerot 1-0).\n"
+"Mahdollistaa myös ylätason ikkunoiden tutkimisen (Win+NVDA+Tab),\n"
+"ja ei-vastaavan prosessin tappamisen Win+F4:llä."
