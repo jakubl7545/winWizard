@@ -1,4 +1,4 @@
-# Win Wizard (ikke oversat) #
+# Win Wizard #
 
 * Forfatter: Oriol Gómez, vedligeholdes i øjeblikket af Łukasz Golonka
 * NVDA-kompatibilitet: 2019.3 og derefter
@@ -38,9 +38,9 @@ under kategorien "Win Wizard".
 
 ## Ændringer
 
-## Changes for 5.0.3:
+## Ændringer i 5.0.3:
 
-* Compatibility with NVDA 2021.1
+* Kompatibilitet med NVDA 2021.1
 
 ## Ændringer i 5.0.2:
 
