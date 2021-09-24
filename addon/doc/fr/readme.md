@@ -39,9 +39,9 @@ Gestes de commandes dans la catégorie Win Wizard.
 
 ## Changements :
 
-## Changes for 5.0.3:
+## Changements pour la version 5.0.3 :
 
-* Compatibility with NVDA 2021.1
+* Compatibilité avec NVDA 2021.1
 
 ## Changements pour la version 5.0.2 :
 
