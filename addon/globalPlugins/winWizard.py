@@ -630,7 +630,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			ui.message(_("There is no window recorded as last hidden!"))
 			return
 		except RuntimeError:
-			# Translators: Announced when user attempts to show last hidden window but it no loger exists.
+			# Translators: Announced when user attempts to show last hidden window but it no longer exists.
 			ui.message(_("Window recorded as last hidden no longer exists!"))
 			return
 
