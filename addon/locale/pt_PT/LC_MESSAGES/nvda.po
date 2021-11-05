@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: winWizard 5.0.3\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-22 05:53+0000\n"
-"PO-Revision-Date: 2021-08-02 13:16+0100\n"
+"PO-Revision-Date: 2021-10-30 23:10+0100\n"
 "Language: pt_PT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -98,7 +98,7 @@ msgstr "Saltos entre janelas de nível superior da aplicação actual."
 
 #. Translators: Information given when user tries to move to top-level window in Windows  Explorer
 msgid "Not supported here."
-msgstr "Sem suporte, aqui"
+msgstr "Sem suporte, aqui."
 
 #. Translators: Announced when the current application has no top-level windows.
 msgid "This window has no top level windows to cycle to."
@@ -139,7 +139,7 @@ msgstr "Falha ao mudar o título da janela!"
 
 #. Translators: Title of the error dialog
 msgid "Error"
-msgstr "Erro!"
+msgstr "Erro"
 
 #. Translators: Description of the keyboard command
 #. that opens dialog allowing to change priority of the currently focused program.
