@@ -14,6 +14,7 @@ import typing
 import globalPluginHandler
 import appModuleHandler
 import addonHandler
+import config
 import ui
 import scriptHandler
 import api
@@ -22,8 +23,32 @@ import winUser
 import tones
 import wx
 import gui
+import gui.guiHelper
+import gui.settingsDialogs as gsd
 import globalVars
 addonHandler.initTranslation()
+
+
+def playTonesIfEnabled(*args, **kwargs) -> None:
+	if config.conf["winWizard"]["playConfirmationBeeps"]:
+		tones.beep(*args, **kwargs)
+
+
+class WinWizardSettingsPanel(gsd.SettingsPanel):
+
+	title = _("winWizard")
+
+	def makeSettings(self, settingsSizer):
+		sHelper = gui.guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
+		# Translators: Label of a checkbox which can be used to enable or disable sounds.
+		self.enableBeepsChk = sHelper.addItem(wx.CheckBox(self, label=_("&Confirm actions with sounds")))
+		self.enableBeepsChk.SetValue(config.conf["winWizard"]["playConfirmationBeeps"])
+
+	def postInit(self):
+		self.enableBeepsChk.SetFocus()
+
+	def onSave(self):
+		config.conf["winWizard"]["playConfirmationBeeps"] = self.enableBeepsChk.GetValue()
 
 
 @dataclass(frozen=True, order=True)
@@ -445,12 +470,16 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		super().__init__()
 		if globalVars.appArgs.secure:
 			return
+		confSpec = {"playConfirmationBeeps": "boolean(default=True)"}
+		config.conf.spec["winWizard"] = confSpec
 		self.hiddenWindowsList: hiddenWindowsList = hiddenWindowsList()
+		gsd.NVDASettingsDialog.categoryClasses.append(WinWizardSettingsPanel)
 
 	def terminate(self):
 		super().terminate()
 		self.hiddenWindowsList.save()
 		del self.hiddenWindowsList
+		gsd.NVDASettingsDialog.categoryClasses.remove(WinWizardSettingsPanel)
 
 	@scriptHandler.script(
 		description=_(
@@ -506,7 +535,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			ui.message(_("Cannot kill the current process"))
 			return
 		else:
-			tones.beep(90, 80)
+			playTonesIfEnabled(90, 80)
 
 	@scriptHandler.script(
 		# Translators: Description of the keyboard command used to change title of the curently focused window.
@@ -556,7 +585,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		focusedWindow = windowWithHandle()
 		try:
 			focusedWindow.hide()
-			tones.beep(80, 80)
+			playTonesIfEnabled(80, 80)
 			self.hiddenWindowsList[slotNumber] = focusedWindow
 		except RuntimeError:
 			# Translators: Message informing user that the current window cannot be hidden.
@@ -569,7 +598,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.hiddenWindowsList.save()
 		if windowToShow.isAlive:
 			windowToShow.show()
-			tones.beep(180, 80)
+			playTonesIfEnabled(180, 80)
 		else:
 			raise RuntimeError("This window no longer exists!")
 
