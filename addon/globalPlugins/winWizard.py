@@ -17,7 +17,6 @@ import addonHandler
 import ui
 import scriptHandler
 import api
-from globalCommands import SCRCAT_FOCUS
 import winKernel
 import winUser
 import tones
@@ -460,7 +459,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			"Jumps between top-level windows of the current application."
 		),
 		gesture="kb:NVDA+windows+Tab",
-		category=SCRCAT_FOCUS,
 	)
 	def script_cycleWindows(self, gesture):
 		if(
