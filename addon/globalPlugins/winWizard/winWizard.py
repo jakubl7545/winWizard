@@ -404,7 +404,7 @@ class windowWithHandle:
 
 class process:
 
-	PRIORITIES: typing.Tuple[Priority] = (
+	PRIORITIES: typing.Tuple[Priority, Priority, Priority, Priority, Priority, Priority] = (
 		Priority(
 			64,
 			# Translators: Name of the process priority
@@ -447,7 +447,7 @@ class process:
 		winKernel.kernel32.CloseHandle(handle)
 		return res
 
-	def getProcessPriority(self) -> None:
+	def getProcessPriority(self) -> int:
 		PROCESS_QUERY_LIMITED_INFORMATION = 0x1000
 		handle = winKernel.kernel32.OpenProcess(PROCESS_QUERY_LIMITED_INFORMATION, 0, self.pid)
 		res = winKernel.kernel32.GetPriorityClass(handle)
