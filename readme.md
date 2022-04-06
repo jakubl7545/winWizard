@@ -20,7 +20,7 @@ All these commands can be remapped from the Input gestures dialog in the Win Wiz
 * NVDA+Windows+p - opens dialog allowing you to set priority of the process associated with the currently focused window
 
 ### Miscellaneous  commands:
-* NVDA+Windows+TAB - switches between top level windows of the current program (useful in foobar2000, Back4Sure etc.) Since this command moves the system focus it can be found in the System focus category of the Input gestures dialog.
+* NVDA+Windows+TAB - switches between top level windows of the current program (useful in foobar2000, Back4Sure etc.)
 * CTRL+ALT+T - allows you to change title of the currently focused program
 
 ## Changes:

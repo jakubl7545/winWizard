@@ -3,27 +3,51 @@
 # WinWizard add-on for NVDA
 # This file is covered by the GNU General Public License.
 # See the file COPYING.txt for more details.
-# Copyright (C) 2020 Oriol Gomez <ogomez.s92@gmail.com>
+# Copyright (C) 2020-2022 Oriol Gomez <ogomez.s92@gmail.com>
 # Currently maintained by Łukasz Golonka <lukasz.golonka@mailbox.org>
 
 import collections
 from dataclasses import dataclass, field
 import pickle
 import os
+import typing
 import globalPluginHandler
 import appModuleHandler
 import addonHandler
+import config
 import ui
 import scriptHandler
 import api
-from globalCommands import SCRCAT_FOCUS
 import winKernel
 import winUser
 import tones
 import wx
 import gui
-import globalVars
+import gui.guiHelper
+import gui.settingsDialogs as gsd
 addonHandler.initTranslation()
+
+
+def playTonesIfEnabled(*args, **kwargs) -> None:
+	if config.conf["winWizard"]["playConfirmationBeeps"]:
+		tones.beep(*args, **kwargs)
+
+
+class WinWizardSettingsPanel(gsd.SettingsPanel):
+
+	title = _("winWizard")
+
+	def makeSettings(self, settingsSizer):
+		sHelper = gui.guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
+		# Translators: Label of a checkbox which can be used to enable or disable sounds.
+		self.enableBeepsChk = sHelper.addItem(wx.CheckBox(self, label=_("&Confirm actions with sounds")))
+		self.enableBeepsChk.SetValue(config.conf["winWizard"]["playConfirmationBeeps"])
+
+	def postInit(self):
+		self.enableBeepsChk.SetFocus()
+
+	def onSave(self):
+		config.conf["winWizard"]["playConfirmationBeeps"] = self.enableBeepsChk.GetValue()
 
 
 @dataclass(frozen=True, order=True)
@@ -31,7 +55,7 @@ class Priority:
 	constant: int = field(repr=False)
 	name: str = field(default="", compare=False)
 
-	def __str__(self):
+	def __str__(self) -> str:
 		return self.name
 
 
@@ -41,7 +65,7 @@ class stack:
 		self.stackNumber = stackNumber
 		self.hiddenInStack = hiddenInStack
 
-	def __str__(self):
+	def __str__(self) -> str:
 		# Translators: Name of the stack shown in the dialog - for example Stack 1.
 		return _("Stack {}").format(self.stackNumber)
 
@@ -62,7 +86,7 @@ class hiddenWindow:
 			# Renumber them for showing in the GUI
 			self.presentationalNumber += 10
 
-	def __str__(self):
+	def __str__(self) -> str:
 		# Translators: Text of the  entry for the hidden window in the hidden windows tree.
 		return _("{}: {}").format(self.presentationalNumber, self.textualRepresentation)
 
@@ -73,7 +97,7 @@ class hiddenWindow:
 
 class baseSingletonDialog(wx.Dialog):
 
-	title = ""
+	title: str = ""
 	_instance = None
 
 	def __new__(cls, *args, **kwargs):
@@ -211,7 +235,7 @@ class unhideWindowDialog(baseSingletonDialog):
 		else:
 			evt.Skip()
 
-	def populateTree(self):
+	def populateTree(self) -> None:
 		for stack in self.hiddenWindowsList.splitToStacks():
 			stackInTree = self.windowsTree.AppendItem(self.treeRoot, str(stack))
 			self.windowsTree.SetItemData(stackInTree, stack)
@@ -238,8 +262,8 @@ class hiddenWindowsList (collections.UserDict):
 	def __init__(self, *args, **kwargs):
 		super().__init__(*args, **kwargs)
 		self.savePath = os.path.join(os.path.abspath(os.path.dirname(__file__)), "hiddenwindows.dat")
-		self.currentStack = 0
-		self.history = list()
+		self.currentStack: int = 0
+		self.history: typing.List[int] = list()
 		try:
 			with open(self.savePath, "rb") as f:
 				for value in pickle.load(f).values():
@@ -264,7 +288,7 @@ class hiddenWindowsList (collections.UserDict):
 			pass
 		super().__delitem__(key)
 
-	def save(self):
+	def save(self) -> None:
 		fileContent = dict()
 		for slot in list(self.keys()):
 			if self[slot].isAlive:
@@ -280,17 +304,17 @@ class hiddenWindowsList (collections.UserDict):
 			with open(self.savePath, "wb") as f:
 				pickle.dump(fileContent, f)
 
-	def previousStack(self):
+	def previousStack(self) -> int:
 		self.currentStack -= 1
 		if self.currentStack < 0:
 			self.currentStack = 0
 		return self.currentStack
 
-	def nextStack(self):
+	def nextStack(self) -> int:
 		self.currentStack += 1
 		return self.currentStack
 
-	def firstEmptySlot(self):
+	def firstEmptySlot(self) -> int:
 		if len(self) == 0:
 			return 0
 		takenSlots = set(self.keys())
@@ -337,22 +361,21 @@ class windowWithHandle:
 			self.appName = appModuleHandler.getAppNameFromProcessID(api.getForegroundObject().processID, True)
 
 	@property
-	def isAlive(self):
+	def isAlive(self) -> bool:
 		return bool(winUser.isWindow(self.handle))
 
 	@property
-	def windowText(self):
+	def windowText(self) -> str:
 		return winUser.getWindowText(self.handle)
 
-	def __str__(self):
+	def __str__(self) -> str:
 		# Translators: Text describing hidden window. For example: "Untitled -  notepad from process notepad.exe"
 		return _("{} from process {}").format(self.windowTitle, self.appName)
 
-	def setWindowText(self, text):
-		res = winUser.user32.SetWindowTextW(self.handle, text)
-		return res
+	def setWindowText(self, text: str) -> int:
+		return winUser.user32.SetWindowTextW(self.handle, text)
 
-	def canBeHidden(self):
+	def canBeHidden(self) -> bool:
 		if self.windowText == "Start":
 			return False
 		elif winUser.getClassName(self.handle) in (
@@ -366,13 +389,13 @@ class windowWithHandle:
 		else:
 			return True
 
-	def hide(self):
+	def hide(self) -> None:
 		if self.canBeHidden():
 			winUser.user32.ShowWindowAsync(self.handle, winUser.SW_HIDE)
 		else:
 			raise RuntimeError("This window cannot be hidden")
 
-	def show(self, setFocus=False):
+	def show(self, setFocus: bool = False) -> None:
 		SW_SHOW = 5
 		winUser.user32.ShowWindowAsync(self.handle, SW_SHOW)
 		if setFocus:
@@ -381,7 +404,7 @@ class windowWithHandle:
 
 class process:
 
-	PRIORITIES = (
+	PRIORITIES: typing.Tuple[Priority, Priority, Priority, Priority, Priority, Priority] = (
 		Priority(
 			64,
 			# Translators: Name of the process priority
@@ -414,32 +437,28 @@ class process:
 		),
 	)
 
-	def __init__(self, PID=None):
-		if PID:
-			self.pid = PID
-		else:
-			self.pid = api.getFocusObject().processID
+	def __init__(self) -> None:
+		self.pid: int = api.getFocusObject().processID
 
-	def kill(self):
+	def kill(self) -> int:
 		PROCESS_TERMINATE = 1
 		handle = winKernel.kernel32.OpenProcess(PROCESS_TERMINATE, 0, self.pid)
 		res = winKernel.kernel32.TerminateProcess(handle, 0)
 		winKernel.kernel32.CloseHandle(handle)
 		return res
 
-	def getProcessPriority(self):
+	def getProcessPriority(self) -> int:
 		PROCESS_QUERY_LIMITED_INFORMATION = 0x1000
 		handle = winKernel.kernel32.OpenProcess(PROCESS_QUERY_LIMITED_INFORMATION, 0, self.pid)
 		res = winKernel.kernel32.GetPriorityClass(handle)
 		winKernel.kernel32.CloseHandle(handle)
 		return res
 
-	def setProcessPriorityByIndex(self, index):
+	def setProcessPriorityByIndex(self, index: int) -> None:
 		PROCESS_SET_INFORMATION = 0x0200
 		handle = winKernel.kernel32.OpenProcess(PROCESS_SET_INFORMATION, 0, self.pid)
-		res = winKernel.kernel32.SetPriorityClass(handle, process.PRIORITIES[index].constant)
+		winKernel.kernel32.SetPriorityClass(handle, process.PRIORITIES[index].constant)
 		winKernel.kernel32.CloseHandle(handle)
-		return res
 
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
@@ -448,14 +467,16 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
 		super().__init__()
-		if globalVars.appArgs.secure:
-			return
-		self.hiddenWindowsList = hiddenWindowsList()
+		confSpec = {"playConfirmationBeeps": "boolean(default=True)"}
+		config.conf.spec["winWizard"] = confSpec
+		self.hiddenWindowsList: hiddenWindowsList = hiddenWindowsList()
+		gsd.NVDASettingsDialog.categoryClasses.append(WinWizardSettingsPanel)
 
 	def terminate(self):
 		super().terminate()
 		self.hiddenWindowsList.save()
 		del self.hiddenWindowsList
+		gsd.NVDASettingsDialog.categoryClasses.remove(WinWizardSettingsPanel)
 
 	@scriptHandler.script(
 		description=_(
@@ -464,7 +485,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			"Jumps between top-level windows of the current application."
 		),
 		gesture="kb:NVDA+windows+Tab",
-		category=SCRCAT_FOCUS,
 	)
 	def script_cycleWindows(self, gesture):
 		if(
@@ -512,7 +532,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			ui.message(_("Cannot kill the current process"))
 			return
 		else:
-			tones.beep(90, 80)
+			playTonesIfEnabled(90, 80)
 
 	@scriptHandler.script(
 		# Translators: Description of the keyboard command used to change title of the curently focused window.
@@ -558,11 +578,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		currentProcess = process()
 		wx.CallAfter(changeProcessPriorityDialog.run, currentProcess)
 
-	def _hideInSlot(self, slotNumber):
+	def _hideInSlot(self, slotNumber: int) -> None:
 		focusedWindow = windowWithHandle()
 		try:
 			focusedWindow.hide()
-			tones.beep(80, 80)
+			playTonesIfEnabled(80, 80)
 			self.hiddenWindowsList[slotNumber] = focusedWindow
 		except RuntimeError:
 			# Translators: Message informing user that the current window cannot be hidden.
@@ -570,12 +590,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			return
 		self.hiddenWindowsList.save()
 
-	def _showFromSlot(self, slotNumber):
+	def _showFromSlot(self, slotNumber: int) -> None:
 		windowToShow = self.hiddenWindowsList.pop(slotNumber)
 		self.hiddenWindowsList.save()
 		if windowToShow.isAlive:
 			windowToShow.show()
-			tones.beep(180, 80)
+			playTonesIfEnabled(180, 80)
 		else:
 			raise RuntimeError("This window no longer exists!")
 
@@ -630,7 +650,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			ui.message(_("There is no window recorded as last hidden!"))
 			return
 		except RuntimeError:
-			# Translators: Announced when user attempts to show last hidden window but it no loger exists.
+			# Translators: Announced when user attempts to show last hidden window but it no longer exists.
 			ui.message(_("Window recorded as last hidden no longer exists!"))
 			return
 
