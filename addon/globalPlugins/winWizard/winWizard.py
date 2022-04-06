@@ -25,7 +25,6 @@ import wx
 import gui
 import gui.guiHelper
 import gui.settingsDialogs as gsd
-import globalVars
 addonHandler.initTranslation()
 
 
@@ -468,8 +467,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
 		super().__init__()
-		if globalVars.appArgs.secure:
-			return
 		confSpec = {"playConfirmationBeeps": "boolean(default=True)"}
 		config.conf.spec["winWizard"] = confSpec
 		self.hiddenWindowsList: hiddenWindowsList = hiddenWindowsList()
