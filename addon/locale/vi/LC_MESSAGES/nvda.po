@@ -9,183 +9,19 @@ msgstr ""
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-22 05:53+0000\n"
 "PO-Revision-Date: 2021-08-28 12:50+0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: \n"
-"Language-Team: \n"
 "X-Generator: Poedit 3.0\n"
-
-#. Translators: Name of the stack shown in the dialog - for example Stack 1.
-#. Translators: Message announced when user switches to another stack.
-#. Translators: Announced when user switches to  another stack.
-msgid "Stack {}"
-msgstr "ngăn xếp "
-
-#. Translators: Text of the  entry for the hidden window in the hidden windows tree.
-msgid "{}: {}"
-msgstr "{}: {}"
-
-#. Translators: title of the dialog.
-msgid "Change process priority"
-msgstr "chỉnh sửa mức độ ưu tiên của tiến trình đang hoạt động "
-
-#. Translators: Label for the group of radio buttons for choosing a process priority.
-msgid "Choose priority"
-msgstr "Chọn mức độ ưu tiên"
-
-#. Translators: Label of the button which sets priority in the dialog.
-msgid "Change"
-msgstr "Thay đổi"
-
-#. Translators: Label for the button which  dismiss the dialog.
-msgid "Cancel"
-msgstr "hủy "
-
-#. Translators: Title of the dialog.
-msgid "Hidden windows"
-msgstr "Cửa sổ bị ẩn"
-
-#. Translators: Label for the button which shows currently selected hidden window.
-msgid "Unhide"
-msgstr "Bỏ ẩn"
-
-#. Translators: Label for the button which closes the dialog.
-msgid "Close"
-msgstr "đóng "
-
-#. Translators: Text describing hidden window. For example: "Untitled -  notepad from process notepad.exe"
-msgid "{} from process {}"
-msgstr "của tiến trình "
-
-#. Translators: Name of the process priority
-msgid "Idle"
-msgstr "thấp nhất "
-
-#. Translators: Name of the process priority
-msgid "Below Normal"
-msgstr "Dưới bình thường "
-
-#. Translators: Name of the process priority
-msgid "Normal"
-msgstr "Bình thường"
-
-#. Translators: Name of the process priority
-msgid "Above normal"
-msgstr "Trên bình thường"
-
-#. Translators: Name of the process priority
-msgid "High"
-msgstr "Cao"
-
-#. Translators: Name of the process priority
-msgid "Real time"
-msgstr "Thời gian thực"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
 #. to be shown on installation and add-on information found in Add-ons Manager.
 msgid "Win Wizard"
 msgstr "Win Wizard"
-
-#. Translators: Description of the keyboard command
-#. allowing to jump between top-level windows of the current application.
-msgid "Jumps between top-level windows of the current application."
-msgstr "Jumps between top-level windows of the current application."
-
-#. Translators: Information given when user tries to move to top-level window in Windows  Explorer
-msgid "Not supported here."
-msgstr "không có sẵn tại đây "
-
-#. Translators: Announced when the current application has no top-level windows.
-msgid "This window has no top level windows to cycle to."
-msgstr "This window has no top level windows to cycle to."
-
-#. Translators: Announced when current program has multiple top-level windows.
-msgid "Multiple top level windows detected."
-msgstr ""
-
-#. Translators: Reported when informations for the current window cannot be retrieved.
-msgid "Can't retrieve window information for this object."
-msgstr "Can't retrieve window information for this object."
-
-#. Translators: Description of the keyboard command that kills currently focused process.
-msgid "Kills currently focused process."
-msgstr "buộc đóng tiến trình hiện tại "
-
-#. Translators: Announced when current process cannot be killed.
-msgid "Cannot kill the current process"
-msgstr "tiếng trình này không thể đóng "
-
-#. Translators: Description of the keyboard command used to change title of the curently focused window.
-msgid "Opens a dialog allowing to change title of the current window"
-msgstr "Mở hộp thoại để bạn thay đổi tiêu đề cửa sổ hiện tại"
-
-#. Translators: Message in the dialog used to change title of the curently focused window.
-msgid "Enter the new title for this window:"
-msgstr "Nhập tiêu đề mới cho cửa sổ này:"
-
-#. Translators: Title of the dialog.
-msgid "Change window title"
-msgstr "Thay đổi "
-
-#. Translators: Shown when changing of the current window title failed.
-msgid "Failed to change window title!"
-msgstr "cửa sổ này không thể thay đổi tiêu đề "
-
-#. Translators: Title of the error dialog
-msgid "Error"
-msgstr "Lỗi"
-
-#. Translators: Description of the keyboard command
-#. that opens dialog allowing to change priority of the currently focused program.
-msgid ""
-"Opens dialog used to change priority of the process of currently focused "
-"program."
-msgstr ""
-"mở hộp thoại để chỉnh lại mức ưu tiên tiếng trình của ứng dụng hiện tại "
-
-#. Translators: Message informing user that the current window cannot be hidden.
-msgid "Cannot hide this window!"
-msgstr "cửa sổ này không thể ẩn "
-
-#. Translators: Description of the keyboard command that shows or hides window at the current slot.
-msgid "Shows or hides window in the current slot."
-msgstr "ẩn hoặc hiện cửa sổ trong vị trí này"
-
-#. Translators: Description of the keyboard command.
-msgid "Goes to the previous stack"
-msgstr "Chuyển về  ngăn xếp trước "
-
-#. Translators: Description of the keyboard command.
-msgid "Goes to the next stack"
-msgstr "Chuyển đến ngăn xếp kế "
-
-#. Translators: Description of the keyboard command.
-msgid "Hides  current window in the first available slot"
-msgstr "ẩn cửa sổ hiện tại "
-
-#. Translators: Description of the keyboard command.
-msgid "Shows last hidden window"
-msgstr "hiện lại cửa sổ bị ẩn lần cuối "
-
-#. Translators: Announced when user attempts to show last hidden window but history is empty.
-msgid "There is no window recorded as last hidden!"
-msgstr "không có cửa sổ ẩn nào có nhãn là được ẩn lần cuối "
-
-#. Translators: Announced when user attempts to show last hidden window but it no loger exists.
-msgid "Window recorded as last hidden no longer exists!"
-msgstr "cửa sổ có nhãn là, ẩn lần cuối không tồn tại "
-
-#. Translators: Description of the keyboard command
-#. that opens dialog allowing to unhide currently hidden windows.
-msgid "Opens dialog for unhiding currently hidden windows."
-msgstr "Mở hộp thoại để xem các cửa sổ ẩn."
-
-#. Translators: Announced when user tries to display list of hidden windows but there are none hidden.
-msgid "There are no windows currently hidden."
-msgstr "không có cửa sổ ẩn nào "
 
 msgid ""
 "This addon allows you to hide windows (NVDA shift and numbers).\n"
@@ -195,3 +31,120 @@ msgstr ""
 "bổ trợ này cho phép bạn ẩn hoặc hiện các cửa sổ. nvda shift và các số).\n"
 "Also, allows exploration of top level windows (windows+NVDA+tab),\n"
 "và buộc đóng các tiến trình không phản hồi bằng cách bấm windows f4."
+
+#~ msgid "Stack {}"
+#~ msgstr "ngăn xếp "
+
+#~ msgid "{}: {}"
+#~ msgstr "{}: {}"
+
+#~ msgid "Change process priority"
+#~ msgstr "chỉnh sửa mức độ ưu tiên của tiến trình đang hoạt động "
+
+#~ msgid "Choose priority"
+#~ msgstr "Chọn mức độ ưu tiên"
+
+#~ msgid "Change"
+#~ msgstr "Thay đổi"
+
+#~ msgid "Cancel"
+#~ msgstr "hủy "
+
+#~ msgid "Hidden windows"
+#~ msgstr "Cửa sổ bị ẩn"
+
+#~ msgid "Unhide"
+#~ msgstr "Bỏ ẩn"
+
+#~ msgid "Close"
+#~ msgstr "đóng "
+
+#~ msgid "{} from process {}"
+#~ msgstr "của tiến trình "
+
+#~ msgid "Idle"
+#~ msgstr "thấp nhất "
+
+#~ msgid "Below Normal"
+#~ msgstr "Dưới bình thường "
+
+#~ msgid "Normal"
+#~ msgstr "Bình thường"
+
+#~ msgid "Above normal"
+#~ msgstr "Trên bình thường"
+
+#~ msgid "High"
+#~ msgstr "Cao"
+
+#~ msgid "Real time"
+#~ msgstr "Thời gian thực"
+
+#~ msgid "Jumps between top-level windows of the current application."
+#~ msgstr "Jumps between top-level windows of the current application."
+
+#~ msgid "Not supported here."
+#~ msgstr "không có sẵn tại đây "
+
+#~ msgid "This window has no top level windows to cycle to."
+#~ msgstr "This window has no top level windows to cycle to."
+
+#~ msgid "Can't retrieve window information for this object."
+#~ msgstr "Can't retrieve window information for this object."
+
+#~ msgid "Kills currently focused process."
+#~ msgstr "buộc đóng tiến trình hiện tại "
+
+#~ msgid "Cannot kill the current process"
+#~ msgstr "tiếng trình này không thể đóng "
+
+#~ msgid "Opens a dialog allowing to change title of the current window"
+#~ msgstr "Mở hộp thoại để bạn thay đổi tiêu đề cửa sổ hiện tại"
+
+#~ msgid "Enter the new title for this window:"
+#~ msgstr "Nhập tiêu đề mới cho cửa sổ này:"
+
+#~ msgid "Change window title"
+#~ msgstr "Thay đổi "
+
+#~ msgid "Failed to change window title!"
+#~ msgstr "cửa sổ này không thể thay đổi tiêu đề "
+
+#~ msgid "Error"
+#~ msgstr "Lỗi"
+
+#~ msgid ""
+#~ "Opens dialog used to change priority of the process of currently focused "
+#~ "program."
+#~ msgstr ""
+#~ "mở hộp thoại để chỉnh lại mức ưu tiên tiếng trình của ứng dụng hiện tại "
+
+#~ msgid "Cannot hide this window!"
+#~ msgstr "cửa sổ này không thể ẩn "
+
+#~ msgid "Shows or hides window in the current slot."
+#~ msgstr "ẩn hoặc hiện cửa sổ trong vị trí này"
+
+#~ msgid "Goes to the previous stack"
+#~ msgstr "Chuyển về  ngăn xếp trước "
+
+#~ msgid "Goes to the next stack"
+#~ msgstr "Chuyển đến ngăn xếp kế "
+
+#~ msgid "Hides  current window in the first available slot"
+#~ msgstr "ẩn cửa sổ hiện tại "
+
+#~ msgid "Shows last hidden window"
+#~ msgstr "hiện lại cửa sổ bị ẩn lần cuối "
+
+#~ msgid "There is no window recorded as last hidden!"
+#~ msgstr "không có cửa sổ ẩn nào có nhãn là được ẩn lần cuối "
+
+#~ msgid "Window recorded as last hidden no longer exists!"
+#~ msgstr "cửa sổ có nhãn là, ẩn lần cuối không tồn tại "
+
+#~ msgid "Opens dialog for unhiding currently hidden windows."
+#~ msgstr "Mở hộp thoại để xem các cửa sổ ẩn."
+
+#~ msgid "There are no windows currently hidden."
+#~ msgstr "không có cửa sổ ẩn nào "
