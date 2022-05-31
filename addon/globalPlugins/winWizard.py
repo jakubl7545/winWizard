@@ -25,6 +25,7 @@ import wx
 import gui
 import gui.guiHelper
 import gui.settingsDialogs as gsd
+import globalVars
 addonHandler.initTranslation()
 
 
@@ -461,6 +462,13 @@ class process:
 		winKernel.kernel32.CloseHandle(handle)
 
 
+def disableInSecureMode(decoratedCls):
+	if globalVars.appArgs.secure:
+		return globalPluginHandler.GlobalPlugin
+	return decoratedCls
+
+
+@disableInSecureMode
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	scriptCategory = _("Win Wizard")
