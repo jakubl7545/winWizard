@@ -9,14 +9,21 @@ msgstr ""
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-22 05:53+0000\n"
 "PO-Revision-Date: 2021-08-03 19:08+0200\n"
+"Last-Translator: Iván Novegil Cancelas <ivan.novegil.cancelas@gmail.com>\n"
+"Language-Team: \n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: Iván Novegil Cancelas <ivan.novegil.cancelas@gmail."
-"com>\n"
-"Language-Team: \n"
 "X-Generator: Poedit 3.0\n"
+
+#, fuzzy
+msgid "winWizard"
+msgstr "Win Wizard"
+
+#. Translators: Label of a checkbox which can be used to enable or disable sounds.
+msgid "&Confirm actions with sounds"
+msgstr ""
 
 #. Translators: Name of the stack shown in the dialog - for example Stack 1.
 #. Translators: Message announced when user switches to another stack.
@@ -145,8 +152,8 @@ msgid ""
 "Opens dialog used to change priority of the process of currently focused "
 "program."
 msgstr ""
-"Abre o diálogo utilizado para cambiar a prioridade do proceso do "
-"programa actualmente enfocado."
+"Abre o diálogo utilizado para cambiar a prioridade do proceso do programa "
+"actualmente enfocado."
 
 #. Translators: Message informing user that the current window cannot be hidden.
 msgid "Cannot hide this window!"
@@ -176,7 +183,7 @@ msgstr "Amosa a última xanela oculta"
 msgid "There is no window recorded as last hidden!"
 msgstr "Non se gravou ningunha xanela como última en ser ocultada!"
 
-#. Translators: Announced when user attempts to show last hidden window but it no loger exists.
+#. Translators: Announced when user attempts to show last hidden window but it no longer exists.
 msgid "Window recorded as last hidden no longer exists!"
 msgstr "A xanela gravada como a última en ser ocultada xa non existe!"
 
@@ -195,6 +202,6 @@ msgid ""
 "and kill a non responding process with windows f4."
 msgstr ""
 "Este complemento permíteche ocultar xanelas (NVDA shift e os números).\n"
-"Ademais, permite a exploración de xanelas de niverl superior (Windows"
-"+NVDA+tab),\n"
+"Ademais, permite a exploración de xanelas de niverl superior (Windows+NVDA"
+"+tab),\n"
 "e matar un proceso que non responde con windows f4."

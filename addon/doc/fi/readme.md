@@ -1,4 +1,4 @@
-# Win Wizard #
+# Ikkunavelho #
 
 * Tekijä: Oriol Gómez, nykyinen ylläpitäjä Łukasz Golonka
 * Yhteensopivuus: NVDA 2019.3 tai uudempi
@@ -8,8 +8,8 @@ Tämän lisäosan avulla voit suorittaa joitakin toimintoja aktiiviselle
 ikkunalle tai siihen liittyvälle prosessille.
 
 ## Näppäinkomennot:
-Näitä komentoja voidaan muuttaa Syötekomennot-valintaikkunan Win Wizard
--kategoriasta.
+Näitä komentoja voidaan muuttaa Näppäinkomennot-valintaikkunan
+Ikkunavelho-kategoriasta.
 ### Ikkunoiden piilottaminen ja piilotettujen ikkunoiden näyttäminen:
 * NVDA+Win+numerot 1-0: Piilottaa aktiivisen ikkunan painettua numeroa
   vastaavaan paikkaan.
@@ -30,7 +30,7 @@ Näitä komentoja voidaan muuttaa Syötekomennot-valintaikkunan Win Wizard
 ### Sekalaiset komennot:
 * NVDA+Win+Sarkain: Vaihtaa nykyisen ohjelman ylätason ikkunoiden välillä
   (hyödyllinen foobar2000:ssa, Back4Suressa jne.) Koska tämä komento siirtää
-  järjestelmän kohdistusta, se löytyy Syötekomennot-valintaikkunan
+  järjestelmän kohdistusta, se löytyy Näppäinkomennot-valintaikkunan
   Järjestelmän kohdistus -kategoriasta.
 * Ctrl+Alt+T: Mahdollistaa aktiivisen ohjelman ikkunan nimen muuttamisen.
 

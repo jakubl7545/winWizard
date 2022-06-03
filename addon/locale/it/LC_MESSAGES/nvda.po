@@ -17,6 +17,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.6.10\n"
 
+#, fuzzy
+msgid "winWizard"
+msgstr "Win Wizard"
+
+#. Translators: Label of a checkbox which can be used to enable or disable sounds.
+msgid "&Confirm actions with sounds"
+msgstr ""
+
 #. Translators: Name of the stack shown in the dialog - for example Stack 1.
 #. Translators: Message announced when user switches to another stack.
 #. Translators: Announced when user switches to  another stack.
@@ -179,7 +187,7 @@ msgstr "Mostra l'ultima finestra nascosta"
 msgid "There is no window recorded as last hidden!"
 msgstr "Non ci sono finestre registrate come ultime nascoste!"
 
-#. Translators: Announced when user attempts to show last hidden window but it no loger exists.
+#. Translators: Announced when user attempts to show last hidden window but it no longer exists.
 msgid "Window recorded as last hidden no longer exists!"
 msgstr "La finestra registrata come ultima nascosta non esiste più!"
 

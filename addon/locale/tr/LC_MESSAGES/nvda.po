@@ -9,13 +9,21 @@ msgstr ""
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-22 05:53+0000\n"
 "PO-Revision-Date: 2021-12-19 20:35+0300\n"
+"Last-Translator: Burak Yüksek <burakyuksek94@gmail.com>\n"
+"Language-Team: \n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: Burak Yüksek <burakyuksek94@gmail.com>\n"
-"Language-Team: \n"
 "X-Generator: Poedit 1.8.11\n"
+
+#, fuzzy
+msgid "winWizard"
+msgstr "Win Wizard"
+
+#. Translators: Label of a checkbox which can be used to enable or disable sounds.
+msgid "&Confirm actions with sounds"
+msgstr ""
 
 #. Translators: Name of the stack shown in the dialog - for example Stack 1.
 #. Translators: Message announced when user switches to another stack.
@@ -93,8 +101,8 @@ msgstr "Win Wizard"
 #. allowing to jump between top-level windows of the current application.
 msgid "Jumps between top-level windows of the current application."
 msgstr ""
-"Üzerinde bulunulan uygulamanın en üst seviyedeki pencereleri arasında "
-"geçiş yapar."
+"Üzerinde bulunulan uygulamanın en üst seviyedeki pencereleri arasında geçiş "
+"yapar."
 
 #. Translators: Information given when user tries to move to top-level window in Windows  Explorer
 msgid "Not supported here."
@@ -146,8 +154,8 @@ msgid ""
 "Opens dialog used to change priority of the process of currently focused "
 "program."
 msgstr ""
-"Üzerinde bulunulan programın işlem önceliğini değiştirmek için "
-"kullanılan iletişim kutusunu açar."
+"Üzerinde bulunulan programın işlem önceliğini değiştirmek için kullanılan "
+"iletişim kutusunu açar."
 
 #. Translators: Message informing user that the current window cannot be hidden.
 msgid "Cannot hide this window!"
@@ -167,8 +175,7 @@ msgstr "Sonraki gruba gider"
 
 #. Translators: Description of the keyboard command.
 msgid "Hides  current window in the first available slot"
-msgstr ""
-"İlk kullanılabilir grup öğesindeki üzerinde bulunulan pencereyi gizler"
+msgstr "İlk kullanılabilir grup öğesindeki üzerinde bulunulan pencereyi gizler"
 
 #. Translators: Description of the keyboard command.
 msgid "Shows last hidden window"
@@ -178,7 +185,7 @@ msgstr "Son gizlenen pencereyi gösterir"
 msgid "There is no window recorded as last hidden!"
 msgstr "Son gizlenen pencere bulunamadı!"
 
-#. Translators: Announced when user attempts to show last hidden window but it no loger exists.
+#. Translators: Announced when user attempts to show last hidden window but it no longer exists.
 msgid "Window recorded as last hidden no longer exists!"
 msgstr "Son gizlenen olarak kaydedilen pencere artık yok!"
 

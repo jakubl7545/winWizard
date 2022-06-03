@@ -9,13 +9,21 @@ msgstr ""
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-22 05:53+0000\n"
 "PO-Revision-Date: 2021-09-24 10:33+0200\n"
+"Last-Translator: Michel Such <michelsuch93@gmail.com>\n"
+"Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: Michel Such <michelsuch93@gmail.com>\n"
-"Language-Team: \n"
 "X-Generator: Poedit 3.0\n"
+
+#, fuzzy
+msgid "winWizard"
+msgstr "Win Wizard"
+
+#. Translators: Label of a checkbox which can be used to enable or disable sounds.
+msgid "&Confirm actions with sounds"
+msgstr ""
 
 #. Translators: Name of the stack shown in the dialog - for example Stack 1.
 #. Translators: Message announced when user switches to another stack.
@@ -93,8 +101,7 @@ msgstr "Win Wizard"
 #. allowing to jump between top-level windows of the current application.
 msgid "Jumps between top-level windows of the current application."
 msgstr ""
-"Basculer entre les fenêtres de niveau supérieur de l'application "
-"courante."
+"Basculer entre les fenêtres de niveau supérieur de l'application courante."
 
 #. Translators: Information given when user tries to move to top-level window in Windows  Explorer
 msgid "Not supported here."
@@ -110,8 +117,7 @@ msgstr "Multiples fenêtres de niveau supérieur détectées."
 
 #. Translators: Reported when informations for the current window cannot be retrieved.
 msgid "Can't retrieve window information for this object."
-msgstr ""
-"Impossible de récupérer les informations de fenêtre pour cet objet."
+msgstr "Impossible de récupérer les informations de fenêtre pour cet objet."
 
 #. Translators: Description of the keyboard command that kills currently focused process.
 msgid "Kills currently focused process."
@@ -179,7 +185,7 @@ msgstr "Montrer la dernière fenêtre cachée"
 msgid "There is no window recorded as last hidden!"
 msgstr "Il n'y a pas de fenêtre enregistrée comme dernière cachée !"
 
-#. Translators: Announced when user attempts to show last hidden window but it no loger exists.
+#. Translators: Announced when user attempts to show last hidden window but it no longer exists.
 msgid "Window recorded as last hidden no longer exists!"
 msgstr "La fenêtre enregistrée comme dernière cachée n'existe plus !"
 
@@ -187,8 +193,7 @@ msgstr "La fenêtre enregistrée comme dernière cachée n'existe plus !"
 #. that opens dialog allowing to unhide currently hidden windows.
 msgid "Opens dialog for unhiding currently hidden windows."
 msgstr ""
-"Ouvrir le dialogue permettant d'afficher les fenêtres actuellement "
-"cachées."
+"Ouvrir le dialogue permettant d'afficher les fenêtres actuellement cachées."
 
 #. Translators: Announced when user tries to display list of hidden windows but there are none hidden.
 msgid "There are no windows currently hidden."
@@ -199,8 +204,7 @@ msgid ""
 "Also, allows exploration of top level windows (windows+NVDA+tab),\n"
 "and kill a non responding process with windows f4."
 msgstr ""
-"Cet extension vous permet de masquer les fenêtres (maj NVDA et "
-"chiffres).\n"
-"Permet également l'exploration des fenêtres de niveau supérieur (windows"
-"+NVDA+tab),\n"
+"Cet extension vous permet de masquer les fenêtres (maj NVDA et chiffres).\n"
+"Permet également l'exploration des fenêtres de niveau supérieur (windows+NVDA"
+"+tab),\n"
 "et de tuez un processus qui ne répond pas avec Windows f4."

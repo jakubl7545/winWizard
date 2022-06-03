@@ -18,6 +18,14 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
+#, fuzzy
+msgid "winWizard"
+msgstr "窗口管理"
+
+#. Translators: Label of a checkbox which can be used to enable or disable sounds.
+msgid "&Confirm actions with sounds"
+msgstr ""
+
 #. Translators: Name of the stack shown in the dialog - for example Stack 1.
 #. Translators: Message announced when user switches to another stack.
 #. Translators: Announced when user switches to  another stack.
@@ -174,7 +182,7 @@ msgstr "显示最后一个被隐藏的窗口"
 msgid "There is no window recorded as last hidden!"
 msgstr "没有上一个隐藏窗口！"
 
-#. Translators: Announced when user attempts to show last hidden window but it no loger exists.
+#. Translators: Announced when user attempts to show last hidden window but it no longer exists.
 msgid "Window recorded as last hidden no longer exists!"
 msgstr "上次隐藏窗口的记录已丢失！"
 
@@ -193,5 +201,5 @@ msgid ""
 "and kill a non responding process with windows f4."
 msgstr ""
 "这个插件可以让您使用 NVDA +Windows + 大键盘数字（1 至 0） 隐显窗口，用 "
-"Windows + NVDA + tab 循环切换顶层窗口，还可以使用 Windows + F4 结束一个无"
-"响应的程序。"
+"Windows + NVDA + tab 循环切换顶层窗口，还可以使用 Windows + F4 结束一个无响应"
+"的程序。"
