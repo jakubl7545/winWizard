@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: winWizard 5.0.3\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-22 05:53+0000\n"
-"PO-Revision-Date: 2022-04-09 09:24+0200\n"
+"PO-Revision-Date: 2022-06-04 05:23+0200\n"
 "Last-Translator: René Linke <rene.linke@hamburg.de>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -17,14 +17,200 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.0.1\n"
 
+msgid "winWizard"
+msgstr "WinWizard"
+
+#. Translators: Label of a checkbox which can be used to enable or disable sounds.
+msgid "&Confirm actions with sounds"
+msgstr "Aktionen mit &Sounds bestätigen"
+
+#. Translators: Name of the stack shown in the dialog - for example Stack 1.
+#. Translators: Message announced when user switches to another stack.
+#. Translators: Announced when user switches to  another stack.
+msgid "Stack {}"
+msgstr "Stapel {}"
+
+#. Translators: Text of the  entry for the hidden window in the hidden windows tree.
+msgid "{}: {}"
+msgstr "{}: {}"
+
+#. Translators: title of the dialog.
+msgid "Change process priority"
+msgstr "Priorität des Prozesses ändern"
+
+#. Translators: Label for the group of radio buttons for choosing a process priority.
+msgid "Choose priority"
+msgstr "Priorität auswählen"
+
+#. Translators: Label of the button which sets priority in the dialog.
+msgid "Change"
+msgstr "Ändern"
+
+#. Translators: Label for the button which  dismiss the dialog.
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#. Translators: Title of the dialog.
+msgid "Hidden windows"
+msgstr "Fenster ausblenden"
+
+#. Translators: Label for the button which shows currently selected hidden window.
+msgid "Unhide"
+msgstr "Einblenden"
+
+#. Translators: Label for the button which closes the dialog.
+msgid "Close"
+msgstr "Schließen"
+
+#. Translators: Text describing hidden window. For example: "Untitled -  notepad from process notepad.exe"
+msgid "{} from process {}"
+msgstr "{} aus Prozess {}"
+
+#. Translators: Name of the process priority
+msgid "Idle"
+msgstr "Leerlauf"
+
+#. Translators: Name of the process priority
+msgid "Below Normal"
+msgstr "Niedriger als Normal"
+
+#. Translators: Name of the process priority
+msgid "Normal"
+msgstr "Normal"
+
+#. Translators: Name of the process priority
+msgid "Above normal"
+msgstr "Höher als Normal"
+
+#. Translators: Name of the process priority
+msgid "High"
+msgstr "Hoch"
+
+#. Translators: Name of the process priority
+msgid "Real time"
+msgstr "Echtzeit"
+
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
 #. to be shown on installation and add-on information found in Add-ons Manager.
 msgid "Win Wizard"
 msgstr "WinWizard"
 
+#. Translators: Description of the keyboard command
+#. allowing to jump between top-level windows of the current application.
+msgid "Jumps between top-level windows of the current application."
+msgstr ""
+"Schaltet zwischen den Fenstern der obersten Ebene der aktuellen Anwendung um."
+
+#. Translators: Information given when user tries to move to top-level window in Windows  Explorer
+msgid "Not supported here."
+msgstr "Wird hier nicht unterstützt."
+
+#. Translators: Announced when the current application has no top-level windows.
+msgid "This window has no top level windows to cycle to."
+msgstr ""
+"Dieses Fenster hat keine Fenster der obersten Ebene, zu denen Sie wechseln "
+"könnten."
+
+#. Translators: Announced when current program has multiple top-level windows.
+msgid "Multiple top level windows detected."
+msgstr "Es wurden mehrere Fenster der obersten Ebene ermittelt."
+
+#. Translators: Reported when informations for the current window cannot be retrieved.
+msgid "Can't retrieve window information for this object."
+msgstr ""
+"Es können keine Fensterinformationen für dieses Objekt abgerufen werden."
+
+#. Translators: Description of the keyboard command that kills currently focused process.
+msgid "Kills currently focused process."
+msgstr "Beendet den aktuell fokussierten Prozess."
+
+#. Translators: Announced when current process cannot be killed.
+msgid "Cannot kill the current process"
+msgstr "Der aktuelle Prozess kann nicht beendet werden"
+
+#. Translators: Description of the keyboard command used to change title of the curently focused window.
+msgid "Opens a dialog allowing to change title of the current window"
+msgstr ""
+"Öffnet einen Dialogfeld für den Sie den Titel des aktuellen Fensters ändern "
+"können"
+
+#. Translators: Message in the dialog used to change title of the curently focused window.
+msgid "Enter the new title for this window:"
+msgstr "Geben Sie den neuen Titel für dieses Fenster ein:"
+
+#. Translators: Title of the dialog.
+msgid "Change window title"
+msgstr "Fenstertitel ändern"
+
+#. Translators: Shown when changing of the current window title failed.
+msgid "Failed to change window title!"
+msgstr "Der Fenstertitel konnte nicht geändert werden!"
+
+#. Translators: Title of the error dialog
+msgid "Error"
+msgstr "Fehler"
+
+#. Translators: Description of the keyboard command
+#. that opens dialog allowing to change priority of the currently focused program.
+msgid ""
+"Opens dialog used to change priority of the process of currently focused "
+"program."
+msgstr ""
+"Öffnet ein Dialogfeld, in dem Sie die Priorität des Prozesses des aktuell "
+"fokussierten Programms ändern können."
+
+#. Translators: Message informing user that the current window cannot be hidden.
+msgid "Cannot hide this window!"
+msgstr "Sie können dieses Fenster nicht ausblenden!"
+
+#. Translators: Description of the keyboard command that shows or hides window at the current slot.
+msgid "Shows or hides window in the current slot."
+msgstr "Blendet das Fenster im aktuellen Slot ein oder aus."
+
+#. Translators: Description of the keyboard command.
+msgid "Goes to the previous stack"
+msgstr "Wechselt zum vorherigen Stapel"
+
+#. Translators: Description of the keyboard command.
+msgid "Goes to the next stack"
+msgstr "Wechselt zum nächsten Stapel"
+
+#. Translators: Description of the keyboard command.
+msgid "Hides  current window in the first available slot"
+msgstr "Blendet das aktuelle Fenster im ersten freien Slot aus"
+
+#. Translators: Description of the keyboard command.
+msgid "Shows last hidden window"
+msgstr "Zeigt das zuletzt ausgeblendete Fenster an"
+
+#. Translators: Announced when user attempts to show last hidden window but history is empty.
+msgid "There is no window recorded as last hidden!"
+msgstr "Es gibt kein Fenster, welches als letztes ausgeblendet wurde!"
+
+#. Translators: Announced when user attempts to show last hidden window but it no longer exists.
+msgid "Window recorded as last hidden no longer exists!"
+msgstr ""
+"Das Fenster, welches als letztes ausgeblendet wurde, existiert nicht mehr!"
+
+#. Translators: Description of the keyboard command
+#. that opens dialog allowing to unhide currently hidden windows.
+msgid "Opens dialog for unhiding currently hidden windows."
+msgstr ""
+"Öffnet das Dialogfeld, in dem Sie die derzeit ausgeblendeten Fenster wieder "
+"einblenden können."
+
+#. Translators: Announced when user tries to display list of hidden windows but there are none hidden.
+msgid "There are no windows currently hidden."
+msgstr "Es gibt derzeit keine ausgeblendeten Fenster."
+
 msgid ""
 "This addon allows you to hide windows (NVDA shift and numbers).\n"
 "Also, allows exploration of top level windows (windows+NVDA+tab),\n"
 "and kill a non responding process with windows f4."
-msgstr "Mit diese Erweiterung können Sie einzelne Fenster ausblenden mit NVDA+Umschalt+Zahlenreihe. Sie können auch die Fenstern der obersten Ebene erkunden mit Win+NVDA+Tab und eines nicht reagierenden Prozesses beenden mit Win+F4."
+msgstr ""
+"Mit dieser Erweiterung können Sie Fenster ausblenden (NVDA+Umschalt"
+"+Ziffer).\n"
+"Ermöglicht auch die Erkundung von Fenstern der obersten Ebene (Windows+NVDA"
+"+Tab),\n"
+"und das Beenden eines nicht reagierenden Prozesses mit Windows+F4."

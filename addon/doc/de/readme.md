@@ -1,4 +1,4 @@
-# Win Wizard #
+# WinWizard #
 
 * Autor: Oriol Gómez, aktuelle Wartung durch Łukasz Golonka
 * NVDA-Kompatibilität: 2019.3 und neuer
@@ -9,34 +9,32 @@ oder dem damit verbundenen Prozess ausführen.
 
 ## Tastaturbefehle:
 Alle diese Befehle können im Dialogfeld für Tastenebefehle in der Kategorie
-"Win Wizard" neu zugeordnet werden.
-### Ausblenden und Anzeigen von ausgeblendeten Fenstern:
-* NVDA+Windows+Zahlen von 1 bis 0 - Blendet das aktuell fokussierte Fenster
-  in dem Slot aus, der der gedrückten Zahl entspricht
-* NVDA+Windows+Pfeil nach links – Wechselt zum vorherigen Stapel versteckter
-  Fenster.
-* NVDA+Windows+Pfeil nach rechts – Wechselt zum nächsten Stapel versteckter
-  Fenster.
+"WinWizard" neu zugeordnet werden.
+### Versteckte Fenster ein- und ausblenden:
+* NVDA+Windows+Zahlenreihe - Blendet das aktuell fokussierte Fenster in dem
+  Slot aus, der der gedrückten Zahl entspricht
+* NVDA+Windows+Pfeiltaste nach links - Wechselt zum vorherigen Stapel
+  ausgeblendeter Fenster.
+* NVDA+Windows+Pfeiltaste nach rechts - Wechselt zum nächsten Stapel
+  ausgeblendeter Fenster.
 * Windows+Umschalt+H - Blendet das aktuell fokussierte Fenster im ersten
   verfügbaren Slot aus
-* NVDA+Windows+H - Zeigt das letzte versteckte Fenster an
+* NVDA+Windows+H - Zeigt das letzte ausgeblendete Fenster an
 * Windows+Umschalt+L - Zeigt die Liste aller versteckten Fenster gruppiert
   nach den Stapeln an (bitte beachten Sie, dass standardmäßig das letzte
   versteckte Fenster ausgewählt ist)
 
 ### Prozesse verwalten:
-* Windows+F4 - Beendet den Prozess, der mit dem aktuell fokussierten Fenster
-  verbunden ist
-* NVDA+Windows+p - Öffnet ein Dialogfeld, in dem Sie die Priorität des
-  Prozesses festlegen können, der mit dem aktuell fokussierten Fenster
-  verknüpft ist
+* Windows+F4 - Beendet den Prozess des aktuell fokussierten Fensters
+* NVDA+Windows+P - Öffnet ein Dialogfeld, in dem Sie die Priorität des
+  Prozesses für das aktuell fokussierte Fenster festlegen können
 
 ### Verschiedene Befehle:
-* NVDA+Windows+TAB - Wechselt zwischen den Fenstern der obersten Ebene des
+* NVDA+Windows+Tab - Wechselt zwischen den Fenstern der obersten Ebene des
   aktuellen Programms (nützlich in Foobar2000, Back4Sure, etc.) Da dieser
   Befehl den System-Fokus verschiebt, ist er in der Kategorie "System-Fokus"
   in den Tastenbefehlen zu finden.
-* STRG+ALT+T - Ermöglicht den Titel des aktuell fokussierten Programms zu
+* Strg+Alt+T - Damit können Sie den Titel des aktuell fokussierten Programms
   ändern
 
 ## Änderungen:

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: 'winWizard' '5.0.1'\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2021-07-26 01:20+0800\n"
-"PO-Revision-Date: 2021-07-26 01:21+0800\n"
+"PO-Revision-Date: 2022-06-06 21:35+0800\n"
 "Last-Translator: \n"
 "Language-Team: Cary-Rowen <manchen_0528@outlook.com>\n"
 "Language: zh_CN\n"
@@ -18,13 +18,12 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-#, fuzzy
 msgid "winWizard"
 msgstr "窗口管理"
 
 #. Translators: Label of a checkbox which can be used to enable or disable sounds.
 msgid "&Confirm actions with sounds"
-msgstr ""
+msgstr "确认操作时播放声音(&C)"
 
 #. Translators: Name of the stack shown in the dialog - for example Stack 1.
 #. Translators: Message announced when user switches to another stack.
@@ -201,5 +200,5 @@ msgid ""
 "and kill a non responding process with windows f4."
 msgstr ""
 "这个插件可以让您使用 NVDA +Windows + 大键盘数字（1 至 0） 隐显窗口，用 "
-"Windows + NVDA + tab 循环切换顶层窗口，还可以使用 Windows + F4 结束一个无响应"
-"的程序。"
+"Windows + NVDA + tab 循环切换顶层窗口，还可以使用 Windows + F4 结束一个无"
+"响应的程序。"
