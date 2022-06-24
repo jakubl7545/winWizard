@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: winWizard 5.0.3\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-22 05:53+0000\n"
-"PO-Revision-Date: 2021-08-02 14:47+0100\n"
+"PO-Revision-Date: 2022-06-19 04:18+0100\n"
 "Last-Translator: Nikola Jović <wwenikola123@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sr\n"
@@ -17,13 +17,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.6.10\n"
 
-#, fuzzy
 msgid "winWizard"
-msgstr "Win wizard"
+msgstr "winWizard"
 
 #. Translators: Label of a checkbox which can be used to enable or disable sounds.
 msgid "&Confirm actions with sounds"
-msgstr ""
+msgstr "&Potvrdi radnje zvukovima"
 
 #. Translators: Name of the stack shown in the dialog - for example Stack 1.
 #. Translators: Message announced when user switches to another stack.
