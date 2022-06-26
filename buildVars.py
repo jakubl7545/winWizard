@@ -29,7 +29,7 @@ Also, allows exploration of top level windows (windows+NVDA+tab),
 and kill a non responding process with windows f4."""
 	),
 	# version
-	"addon_version": "5.0.3",
+	"addon_version": "5.0.4",
 	# Author(s)
 	"addon_author": u"Oriol Gomez <ogomez.s92@gmail.com>, Łukasz Golonka <lukasz.golonka@mailbox.org>",
 	# URL for the add-on documentation support
