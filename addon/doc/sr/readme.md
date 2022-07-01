@@ -4,8 +4,11 @@
 * NVDA kompatibilnost: 2019.3 i noviji
 * Preuzmi [stabilnu verziju ][1]
 
-Ovaj dodatak vam dozvoljava da izvršite određene radnje na fokusiranom
-prozoru ili procesu koji pripada njemu.
+Ovaj dodatak vam dozvoljava da izvršite određene radnje sa fokusiranim
+prozorom ili procesom koji je vezan uz njega.  Kada se zatvori proces, ili
+prikaže/sakrije prozor čuće se zvučni signal potvrde ako je radnja uspešna.
+Ako ovo ne želite možete da onemogućite ove zvučne signale iz panela Win
+Wizarda iz dijaloga NVDA podešavanja.
 
 ## Tasterske prečice:
 Sve ove prečice se mogu promeniti u dijalogu ulazne komande u kategoriji Win
@@ -31,21 +34,26 @@ wizard.
 
 ### Razne komande:
 * NVDA+Windows+TAB - Prebacuje se između prozora aplikacije (korisno u
-  programima foobar2000, Back4Sure i slično.) Budući da ova komanda pomera
-  sistemski fokus možete je pronaći u kategoriji sistemski fokus dijaloga
-  ulazne komande.
+  programima foobar2000, Back4Sure i slično)
 * CTRL+ALT+T - Dozvoljava vam da promenite naziv trenutno fokusiranog
   prozora
 
 ## Promene:
 
-## Promene u 5.0.3:
+### Promene u 5.0.4:
+
+* Kompatibilnost uz NVDA 2022.1
+* Sada je moguće onemogućiti zvučne signale potvrde iz panela sa
+  podešavanjima dodatka
+* Ažurirani prevodi
+
+### Promene u 5.0.3:
 
 * Kompatibilnost uz NVDA 2021.1
 
-## Promene u 5.0.2:
+### Promene u 5.0.2:
 
-- Prva verzija dostupna na sajtu sa dodacima
+* Prva verzija dostupna na sajtu sa dodacima
 
 [[!tag dev stable]]
 

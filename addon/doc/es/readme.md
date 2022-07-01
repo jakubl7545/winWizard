@@ -4,8 +4,11 @@
 * Compatibilidad con NVDA: 2019.3 y versiones posteriores
 * Descargar [versión estable][1]
 
-Este complemento permite realizar varias operaciones sobre la ventana que
-tiene el foco o el proceso asociado con ella.
+Este complemento permite realizar algunas operaciones en la ventana con el
+foco o el proceso asociado a ella. Al matar un proceso, o mostrar/ocultar
+una ventana, se reproduce un pitido de confirmación si la acción tiene
+éxito. Si encuentras esto molesto, puedes desactivar los pitidos en el panel
+de opciones de WinWizard, disponible en el diálogo de opciones de NVDA.
 
 ## Atajos de teclado:
 Todas estas órdenes se pueden reasignar desde el diálogo Gestos de entrada,
@@ -31,20 +34,25 @@ en la categoría Win Wizard.
 
 ### Órdenes varias:
 * NVDA+windows+tab - Alterna entre las ventanas de alto nivel del programa
-  actual (útil en foobar2000, Back4Sure, etc.). Como esta orden mueve el
-  foco del sistema, se puede encontrar en la categoría Foco del sistema en
-  el diálogo Gestos de entrada.
+  actual (útil en foobar2000, Back4Sure, etc.)
 * Ctrl+alt+t - Permite cambiar el título del programa que tiene el foco
 
 ## Cambios:
 
-## Cambios para 5.0.3:
+### Cambios para 5.0.4:
+
+* Compatibilidad con NVDA 2022.1
+* Ahora es posible deshabilitar los pitidos de confirmación desde el panel
+  de opciones del complemento
+* Traducciones actualizadas
+
+### Cambios para 5.0.3:
 
 * Compatibilidad con NVDA 2021.1
 
-## Cambios para 5.0.2:
+### Cambios para 5.0.2:
 
-- Primera versión disponible en el sitio web de complementos
+* Primera versión disponible en el sitio web de complementos
 
 [[!tag dev stable]]
 

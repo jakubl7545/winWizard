@@ -4,8 +4,11 @@
 * Сумісність з NVDA: 2019.3 та новіші
 * Завантажити [стабільну версію][1]
 
-Цей додаток дозволяє виконувати деякі операції над виділеним вікном або
-процесом, пов'язаним з ним.
+This add-on allows you to perform some operations on the focused window or
+the process associated with it.  When killing a process, or showing / hiding
+a window a confirmation beep is played when the action succeeds.  If you
+find this annoying you can disable these beeps in the Win Wizard's settings
+panel available from NVDA's settings dialog.
 
 ## Комбінації клавіш:
 Всі ці команди можна перепризначити у діалозі жестів вводу в категорії Win
@@ -30,21 +33,26 @@ Wizard.
   процесу, пов'язаного з поточним вибраним вікном
 
 ### Різні команди:
-* NVDA+Windows+TAB - перемикає між вікнами верхнього рівня поточної програми
-  (корисно у foobar2000, Back4Sure і т.д.) Оскільки ця команда переміщує
-  системний фокус, її можна знайти в категорії «Системний фокус» у діалозі
-  «Жести вводу».
+* NVDA+Windows+TAB - switches between top level windows of the current
+  program (useful in foobar2000, Back4Sure etc.)
 * CTRL+ALT+T -  дозволяє змінити назву поточної програми у фокусі
 
 ## Зміни:
 
-## Зміни у версії 5.0.3:
+### Changes for 5.0.4:
+
+* Compatibility with NVDA 2022.1
+* It is now possible to disable confirmation beeps in the add-ons settings
+  panel
+* Update translations
+
+### Зміни у версії 5.0.3:
 
 * Сумісність з NVDA 2021.1
 
-## Зміни у версії 5.0.2:
+### Зміни у версії 5.0.2:
 
-- Перша версія доступна з веб-сайту додатків
+* First release available from the add-ons website
 
 [[!tag dev stable]]
 

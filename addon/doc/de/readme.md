@@ -4,8 +4,12 @@
 * NVDA-Kompatibilität: 2019.3 und neuer
 * [Stabile Version herunterladen][1]
 
-Mit dieser Erweiterung können Sie einige Operationen im fokussierten Fenster
-oder dem damit verbundenen Prozess ausführen.
+Mit dieser Erweiterung können Sie einige Operationen an dem fokussierten
+Fenster oder dem damit verbundenen Prozess durchführen. Beim Beenden eines
+Prozesses oder beim Ein- und Ausblenden eines Fensters ertönt ein Signalton
+zur Bestätigung, wenn die Aktion erfolgreich war. Wenn Sie dies als störend
+empfinden, können Sie diese Signaltöne in den Einstellungen der Erweiterung
+deaktivieren, die Sie über den NVDA-Einstellungen aufrufen können.
 
 ## Tastaturbefehle:
 Alle diese Befehle können im Dialogfeld für Tastenebefehle in der Kategorie
@@ -30,22 +34,27 @@ Alle diese Befehle können im Dialogfeld für Tastenebefehle in der Kategorie
   Prozesses für das aktuell fokussierte Fenster festlegen können
 
 ### Verschiedene Befehle:
-* NVDA+Windows+Tab - Wechselt zwischen den Fenstern der obersten Ebene des
-  aktuellen Programms (nützlich in Foobar2000, Back4Sure, etc.) Da dieser
-  Befehl den System-Fokus verschiebt, ist er in der Kategorie "System-Fokus"
-  in den Tastenbefehlen zu finden.
+* NVDA+Windows+TAB - Schaltet zwischen den Fenstern der obersten Ebene des
+  aktuellen Programms um (nützlich in Foobar2000, Back4Sure, etc.)
 * Strg+Alt+T - Damit können Sie den Titel des aktuell fokussierten Programms
   ändern
 
 ## Änderungen:
 
-## Änderungen in 5.0.3:
+### Änderungen in 5.0.4:
+
+* Kompatibel mit NVDA 2022.1
+* Sie können nun die Signaltöne zur Bestätigung in den Einstellungen der
+  Erweiterung deaktivieren
+* Übersetzungen aktualisiert
+
+### Änderungen in 5.0.3:
 
 * Kompatibilität mit NVDA 2021.1
 
-## Änderungen in 5.0.2:
+### Änderungen in 5.0.2:
 
-- Erste Version auf der Webseite für Erweiterungen verfügbar
+* Erste Version, die auf der Webseite für NVDA-Erweiterungen verfügbar ist
 
 [[!tag dev stable]]
 
