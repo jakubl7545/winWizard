@@ -4,11 +4,11 @@
 * NVDA kompatibilnost: 2019.3 i novije verzije
 * Preuzmi [stablnu verziju][1]
 
-This add-on allows you to perform some operations on the focused window or
-the process associated with it.  When killing a process, or showing / hiding
-a window a confirmation beep is played when the action succeeds.  If you
-find this annoying you can disable these beeps in the Win Wizard's settings
-panel available from NVDA's settings dialog.
+Ovaj dodatak omogućuje izvođenje nekih operacija na aktivnom prozoru ili
+procesu povezanim s njim. Prilikom zatvaranja procesa ili
+prikazivanja/skrivanja prozora čuje se zvučni signal potvrde kad radnja
+uspije. Ako te ovo smeta, isključi ove zvučne signale na ploči s postavkama
+Win Wizarda u dijaloškom okviru NVDA postavki.
 
 ## Tipkovne naredbe:
 Sve ove naredbe mogu se ponovo odrediti u dijaloškom okviru ulaznih gesta u
@@ -31,18 +31,17 @@ kategoriji Win čarobnjak.
   povezan s trenutačno fokusiranim prozorom
 
 ### Razne naredbe:
-* NVDA+Windows+TAB - switches between top level windows of the current
-  program (useful in foobar2000, Back4Sure etc.)
+* NVDA+Windows+tabulator – prebacuje između prednjih prozora aktualnog
+  programa (korisno u Foobar2000, Back4Sure i sl.)
 * CTRL+ALT+T – omogućuje mijenjanje naslova trenutačno fokusiranog programa
 
 ## Promjene:
 
-### Changes for 5.0.4:
+### Promjene u 5.0.4:
 
-* Compatibility with NVDA 2022.1
-* It is now possible to disable confirmation beeps in the add-ons settings
-  panel
-* Update translations
+* Kompatibilnost s NVDA 2022.1
+* Sada je moguće uključiti zvučne signale potvrde na ploči postavki dodataka
+* Aktualizirani prijevodi
 
 ### Promjene u 5.0.3:
 
@@ -50,7 +49,7 @@ kategoriji Win čarobnjak.
 
 ### Promjene u 5.0.2:
 
-* First release available from the add-ons website
+* Prvo izdanje dostupno na web stranici dodataka
 
 [[!tag dev stable]]
 
