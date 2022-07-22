@@ -4,11 +4,11 @@
 * Yhteensopivuus: NVDA 2019.3 tai uudempi
 * Lataa [vakaa versio][1]
 
-This add-on allows you to perform some operations on the focused window or
-the process associated with it.  When killing a process, or showing / hiding
-a window a confirmation beep is played when the action succeeds.  If you
-find this annoying you can disable these beeps in the Win Wizard's settings
-panel available from NVDA's settings dialog.
+Tämän lisäosan avulla voit suorittaa joitakin toimintoja korostetulle
+ikkunalle tai siihen liittyvälle prosessille. Kun prosessi lopetetaan tai
+ikkuna näytetään/piilotetaan, toiminnon onnistuessa kuuluu
+vahvistusääni. Jos tämä tuntuu ärsyttävältä, voit poistaa äänen käytöstä
+Ikkunavelhon asetuspaneelista, joka löytyy NVDA:n asetusikkunasta.
 
 ## Näppäinkomennot:
 Näitä komentoja voidaan muuttaa Näppäinkomennot-valintaikkunan
@@ -31,18 +31,18 @@ Ikkunavelho-kategoriasta.
   liittyvän prosessin prioriteetin.
 
 ### Sekalaiset komennot:
-* NVDA+Windows+TAB - switches between top level windows of the current
-  program (useful in foobar2000, Back4Sure etc.)
+* NVDA+Win+Sarkain: Vaihtaa nykyisen ohjelman ylätason ikkunoiden välillä
+  (hyödyllinen foobar2000:ssa, Back4Suressa jne.)
 * Ctrl+Alt+T: Mahdollistaa aktiivisen ohjelman ikkunan nimen muuttamisen.
 
 ## Muutokset:
 
-### Changes for 5.0.4:
+### Muutokset versiossa 5.0.4:
 
-* Compatibility with NVDA 2022.1
-* It is now possible to disable confirmation beeps in the add-ons settings
-  panel
-* Update translations
+* Yhteensopiva NVDA 2022.1:n kanssa
+* Vahvistusäänen käytöstä poistaminen on nyt mahdollista lisäosan
+  asetuspaneelista
+* Käännöksiä päivitetty
 
 ### Muutokset versiossa 5.0.3:
 
@@ -50,7 +50,7 @@ Ikkunavelho-kategoriasta.
 
 ### Muutokset versiossa 5.0.2:
 
-* First release available from the add-ons website
+* Ensimmäinen lisäosasivustolta saatavilla oleva versio
 
 [[!tag dev stable]]
 
