@@ -4,44 +4,44 @@
 * Compatibilidade co NVDA: 2019.3 en diante
 * Descargar [versión estable][1]
 
-This add-on allows you to perform some operations on the focused window or
-the process associated with it.  When killing a process, or showing / hiding
-a window a confirmation beep is played when the action succeeds.  If you
-find this annoying you can disable these beeps in the Win Wizard's settings
-panel available from NVDA's settings dialog.
+Este complemento permíteche realizar algunhas operacións na xanela enfocada
+ou no proceso asociado a ela.  Ó matar un proceso, ou mostrar/ocultar unha
+xanela reprodúcese un pitido se a acción é exitosa.  Se o atopas molesto
+podes podes desactivar estes pitidos dende o panel de opcións de Win Wizard
+dispoñible dende o diálogo de opcións de NVDA:
 
 ## Ordes de teclas:
 Todos estes comandos pódense reasignar dende o diálogo Xestos de entrada na
 categoría Win Wizard.
-### Ocultando e amosando ventás ocultas:
-* NVDA+Windows+números do 1 ó 0 - oculta a ventá actualmente co foco na
+### Ocultando e amosando xanelas ocultas:
+* NVDA+Windows+números do 1 ó 0 - oculta a xanela actualmente co foco na
   posición correspondente ó número premido
-* NVDA+Windows+frecha esquerda - móvese á pía anterior de ventás ocultas.
-* NVDA+Windows+frecha dereita - móvese á seguinte pía de ventás ocultas.
-* Windows+Shift+h - oculta a ventá actualmente co foco na primeira posición
+* NVDA+Windows+frecha esquerda - móvese á pía anterior de xanelas ocultas.
+* NVDA+Windows+frecha dereita - móvese á seguinte pía de xanelas ocultas.
+* Windows+Shift+h - oculta a xanela actualmente co foco na primeira posición
   dispoñible
-* NVDA+Windows+h - amosa a última ventá ocultada
-* Windows+Shift+l - amosa a lista de todas as ventás ocultas agrupadas por
-  pía (ten en conta que se selecciona a última ventá ocultada)
+* NVDA+Windows+h - amosa a última xanela ocultada
+* Windows+Shift+l - amosa a lista de todas as xanelas ocultas agrupadas por
+  pía (ten en conta que se selecciona a última xanela ocultada)
 
 ### Administrando procesos:
-* Windows+F4 - mata o proceso asociado coa ventá actualmente co foco
+* Windows+F4 - mata o proceso asociado coa xanela actualmente co foco
 * NVDA+Windows+p - abre un diálogo que che permite establecer a prioridade
-  do proceso asociado coa ventá actualmente co foco
+  do proceso asociado coa xanela actualmente co foco
 
 ### Ordes misceláneas:
-* NVDA+Windows+TAB - switches between top level windows of the current
-  program (useful in foobar2000, Back4Sure etc.)
+* NVDA+Windows+TAB - cambia entre xanelas de nivel superior do programa
+  actual (útil en foobar2000, Back4Sure etc.)
 * CTRL+ALT+T - permíteche cambiar o título do programa actualmente co foco
 
 ## Trocos:
 
-### Changes for 5.0.4:
+### Cambios para 5.0.4:
 
-* Compatibility with NVDA 2022.1
-* It is now possible to disable confirmation beeps in the add-ons settings
-  panel
-* Update translations
+* Compatibilidade con NVDA 2022.1
+* Agora é posible desactivar os pitidos de confirmación no panel de opcións
+  do complemento
+* Traducións actualizadas
 
 ### Trocos para 5.0.3:
 
@@ -49,7 +49,7 @@ categoría Win Wizard.
 
 ### Trocos para 5.0.2:
 
-* First release available from the add-ons website
+* Primeira versión dispoñible dende o sitio web de complementos
 
 [[!tag dev stable]]
 
