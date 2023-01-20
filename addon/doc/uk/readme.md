@@ -4,11 +4,11 @@
 * Сумісність з NVDA: 2019.3 та новіші
 * Завантажити [стабільну версію][1]
 
-This add-on allows you to perform some operations on the focused window or
-the process associated with it.  When killing a process, or showing / hiding
-a window a confirmation beep is played when the action succeeds.  If you
-find this annoying you can disable these beeps in the Win Wizard's settings
-panel available from NVDA's settings dialog.
+Цей додаток дозволяє виконувати деякі операції над вікном у фокусі або
+процесом, пов'язаним з ним.  Під час завершення процесу або
+показу/приховування вікна лунає звуковий сигнал, який підтверджує успішність
+дії.  Якщо вас це дратує, ви можете вимкнути ці звукові сигнали на панелі
+налаштувань Win Wizard, доступній у діалозі налаштувань NVDA.
 
 ## Комбінації клавіш:
 Всі ці команди можна перепризначити у діалозі жестів вводу в категорії Win
@@ -33,18 +33,18 @@ Wizard.
   процесу, пов'язаного з поточним вибраним вікном
 
 ### Різні команди:
-* NVDA+Windows+TAB - switches between top level windows of the current
-  program (useful in foobar2000, Back4Sure etc.)
+* NVDA+Windows+TAB - перемикає між вікнами верхнього рівня поточної програми
+  (корисно у foobar2000, Back4Sure і т.д.).
 * CTRL+ALT+T -  дозволяє змінити назву поточної програми у фокусі
 
 ## Зміни:
 
-### Changes for 5.0.4:
+### Зміни у версії 5.0.4:
 
-* Compatibility with NVDA 2022.1
-* It is now possible to disable confirmation beeps in the add-ons settings
-  panel
-* Update translations
+* Сумісність з NVDA 2022.1
+* З'явилася можливість вимкнути звукові сигнали підтвердження в панелі
+  налаштувань додатка
+* Оновлено переклади.
 
 ### Зміни у версії 5.0.3:
 
@@ -52,7 +52,7 @@ Wizard.
 
 ### Зміни у версії 5.0.2:
 
-* First release available from the add-ons website
+* Перша версія доступна на веб-сайті додатків
 
 [[!tag dev stable]]
 
