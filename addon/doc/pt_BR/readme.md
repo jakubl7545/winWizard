@@ -1,8 +1,8 @@
 # Win Wizard #
 
 * Autor: Oriol Gómez, mantido atualmente por Lukasz Golonka
-* Compatibilidad con NVDA: 2019.3 e versões posteriores
-* Download [Versão extável]][1]
+* Compatibilidade con NVDA: 2019.3 e versões posteriores
+* Download [Versão extável][1]
 
 Este addon permite que você execute algumas operações na janela com o
 foco e o processo associado a ele. Ao matar um processo ou mostrar/ocultar
@@ -50,7 +50,5 @@ na categoria Win Wizard.
 ### Alterações para 5.0.2:
 
 * Primeira versão disponível no site de complementos
-
-[[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=winwizard

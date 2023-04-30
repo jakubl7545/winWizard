@@ -1,6 +1,6 @@
 # Win Wizard
 
-* Author: Oriol Gómez, current maintenance by Łukasz Golonka
+* Author: Oriol Gómez, current maintenance by Lukasz Golonka
 * NVDA compatibility: 2019.3 and beyond
 
 This add-on allows you to perform some operations on the focused window or the process associated with it.
@@ -26,6 +26,12 @@ All these commands can be remapped from the Input gestures dialog in the Win Wiz
 * CTRL+ALT+T - allows you to change title of the currently focused program
 
 ## Changes:
+
+### Changes for 5.0.5:
+
+* Compatibility with NVDA 2023.1
+* Translation to pt_BR
+* Fixed UTF-8 encoding bug in manifest file
 
 ### Changes for 5.0.4:
 

@@ -26,7 +26,7 @@ import gui
 import gui.guiHelper
 import gui.settingsDialogs as gsd
 import globalVars
-#addonHandler.initTranslation()
+addonHandler.initTranslation()
 
 
 def playTonesIfEnabled(*args, **kwargs) -> None:
