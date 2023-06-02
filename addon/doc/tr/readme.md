@@ -4,11 +4,12 @@
 * NVDA uyumluluğu: 2019.3 ve üzeri sürümleri
 * İndir [kararlı sürüm][1]
 
-This add-on allows you to perform some operations on the focused window or
-the process associated with it.  When killing a process, or showing / hiding
-a window a confirmation beep is played when the action succeeds.  If you
-find this annoying you can disable these beeps in the Win Wizard's settings
-panel available from NVDA's settings dialog.
+Bu eklenti, odaklanılan pencere veya onunla ilişkili işlem üzerinde bazı
+işlemler gerçekleştirmenize olanak tanır.  Bir işlemi öldürürken veya bir
+pencereyi gösterirken / gizlerken, eylem başarılı olduğunda bir onay bip
+sesi duyulur.  Bunu rahatsız edici bulursanız, NVDA'nın ayarlar iletişim
+kutusundan Win Wizard'ın ayarlar panelinde bu bip seslerini devre dışı
+bırakabilirsiniz.
 
 ## Kısayollar:
 Tüm kısayollar girdi hareketleri iletişim kutusundaki WinWizard
@@ -30,26 +31,25 @@ kategorisinden değiştirilebilir.
   değiştirebileceğiniz bir iletişim kutusu açar
 
 ### Çeşitli kısayollar:
-* NVDA+Windows+TAB - switches between top level windows of the current
-  program (useful in foobar2000, Back4Sure etc.)
+* NVDA+Windows+TAB - geçerli programın en üst düzey pencereleri arasında
+  geçiş yapar (foobar2000, Back4Sure vb.'de kullanışlıdır)
 * CTRL+ALT+T - üzerinde bulunulan programın pencere başlığını değiştirir
 
 ## Değişiklikler:
 
-### Changes for 5.0.4:
+### 5.0.4 için değişiklikler:
 
-* Compatibility with NVDA 2022.1
-* It is now possible to disable confirmation beeps in the add-ons settings
-  panel
-* Update translations
+* NVDA 2022.1 ile uyumluluk
+* Eklenti ayar panelinde onay bip seslerini devre dışı bırakmak artık mümkün
+* Çeviriler güncellendi
 
-### 5.0.3 için değişiklikler
+### 5.0.3 için değişiklikler:
 
 * NVDA 2021.1 ile uyumluluk
 
 ### 5.0.2 için değişiklikler:
 
-* First release available from the add-ons website
+* Eklentiler web sitesinde bulunan ilk sürüm
 
 [[!tag dev stable]]
 
