@@ -7,7 +7,7 @@
 Este complemento permíteche realizar algunhas operacións na xanela enfocada
 ou no proceso asociado a ela.  Ó matar un proceso, ou mostrar/ocultar unha
 xanela reprodúcese un pitido se a acción é exitosa.  Se o atopas molesto
-podes podes desactivar estes pitidos dende o panel de opcións de Win Wizard
+podes desactivar estes pitidos dende o panel de opcións de Win Wizard
 dispoñible dende o diálogo de opcións de NVDA:
 
 ## Ordes de teclas:
