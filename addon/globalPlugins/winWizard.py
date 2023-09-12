@@ -6,10 +6,13 @@
 # Copyright (C) 2020-2022 Oriol Gomez <ogomez.s92@gmail.com>
 # Currently maintained by Łukasz Golonka <lukasz.golonka@mailbox.org>
 
+from __future__ import annotations
+
 import collections
-from dataclasses import dataclass, field
-import pickle
+import dataclasses
+import enum
 import os
+import pickle
 import typing
 import globalPluginHandler
 import appModuleHandler
@@ -51,13 +54,37 @@ class WinWizardSettingsPanel(gsd.SettingsPanel):
 		config.conf["winWizard"]["playConfirmationBeeps"] = self.enableBeepsChk.GetValue()
 
 
-@dataclass(frozen=True, order=True)
-class Priority:
-	constant: int = field(repr=False)
-	name: str = field(default="", compare=False)
+class PRIORITIES(enum.IntEnum):
+
+	"""Enumerates all possible process priorities.
+
+	The full list with the more detailed description can be found at:
+	https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-setpriorityclass#parameters
+	"""
+
+	IDLE = 64
+	BELOW_NORMAL = 16384
+	NORMAL = 32
+	ABOVE_NORMAL = 32768
+	HIGH = 128
+	REAL_TIME = 256
 
 	def __str__(self) -> str:
-		return self.name
+		"""Return the descriptio nof the given priority, used when displaying in the GUI."""
+		return {
+			# Translators: Name of the process priority
+			PRIORITIES.IDLE: _("Idle"),
+			# Translators: Name of the process priority
+			PRIORITIES.BELOW_NORMAL: _("Below Normal"),
+			# Translators: Name of the process priority
+			PRIORITIES.NORMAL: _("Normal"),
+			# Translators: Name of the process priority
+			PRIORITIES.ABOVE_NORMAL: _("Above normal"),
+			# Translators: Name of the process priority
+			PRIORITIES.HIGH: _("High"),
+			# Translators: Name of the process priority
+			PRIORITIES.REAL_TIME: _("Real time"),
+		}[self]
 
 
 class stack:
@@ -133,7 +160,7 @@ class changeProcessPriorityDialog(baseSingletonDialog):
 	# Translators: title of the dialog.
 	title = _("Change process priority")
 
-	def __init__(self, currentProcess):
+	def __init__(self, currentProcess: process) -> None:
 		self.currentProcess = currentProcess
 		super().__init__()
 		mainSizer = wx.BoxSizer(wx.VERTICAL)
@@ -143,11 +170,12 @@ class changeProcessPriorityDialog(baseSingletonDialog):
 				self,
 				# Translators: Label for the group of radio buttons for choosing a process priority.
 				label=_("Choose priority"),
-				choices=[str(priority) for priority in process.PRIORITIES],
+				choices=[str(priority) for priority in PRIORITIES],
 				style=wx.RA_SPECIFY_ROWS
 			)
 		)
-		currentPriorityIndex = process.PRIORITIES.index(Priority(self.currentProcess.getProcessPriority()))
+		self.priorities_to_indexes = {prio: index for index, prio in enumerate(PRIORITIES)}
+		currentPriorityIndex = self.priorities_to_indexes[currentProcess.getProcessPriority()]
 		self.priorities.SetSelection(currentPriorityIndex)
 		buttons = gui.guiHelper.ButtonHelper(wx.HORIZONTAL)
 		okAction = buttons.addButton(
@@ -175,7 +203,7 @@ class changeProcessPriorityDialog(baseSingletonDialog):
 
 	def onChange(self, evt):
 		priorityToSet = self.priorities.GetSelection()
-		self.currentProcess.setProcessPriorityByIndex(priorityToSet)
+		self.currentProcess.setProcessPriority({k: v for v, k in self.priorities_to_indexes.items()}[priorityToSet])
 		self.Destroy()
 		self.__class__._instance = None
 
@@ -405,39 +433,6 @@ class windowWithHandle:
 
 class process:
 
-	PRIORITIES: typing.Tuple[Priority, Priority, Priority, Priority, Priority, Priority] = (
-		Priority(
-			64,
-			# Translators: Name of the process priority
-			name=_("Idle")
-		),
-		Priority(
-			16384,
-			# Translators: Name of the process priority
-			name=_("Below Normal")
-		),
-		Priority(
-			32,
-			# Translators: Name of the process priority
-			name=_("Normal")
-		),
-		Priority(
-			32768,
-			# Translators: Name of the process priority
-			name=_("Above normal")
-		),
-		Priority(
-			128,
-			# Translators: Name of the process priority
-			name=_("High")
-		),
-		Priority(
-			256,
-			# Translators: Name of the process priority
-			name=_("Real time")
-		),
-	)
-
 	def __init__(self) -> None:
 		self.pid: int = api.getFocusObject().processID
 
@@ -448,17 +443,17 @@ class process:
 		winKernel.kernel32.CloseHandle(handle)
 		return res
 
-	def getProcessPriority(self) -> int:
+	def getProcessPriority(self) -> PRIORITIES:
 		PROCESS_QUERY_LIMITED_INFORMATION = 0x1000
 		handle = winKernel.kernel32.OpenProcess(PROCESS_QUERY_LIMITED_INFORMATION, 0, self.pid)
 		res = winKernel.kernel32.GetPriorityClass(handle)
 		winKernel.kernel32.CloseHandle(handle)
-		return res
+		return PRIORITIES(res)
 
-	def setProcessPriorityByIndex(self, index: int) -> None:
+	def setProcessPriority(self, priority_to_set: PRIORITIES) -> None:
 		PROCESS_SET_INFORMATION = 0x0200
 		handle = winKernel.kernel32.OpenProcess(PROCESS_SET_INFORMATION, 0, self.pid)
-		winKernel.kernel32.SetPriorityClass(handle, process.PRIORITIES[index].constant)
+		winKernel.kernel32.SetPriorityClass(handle, priority_to_set.value)
 		winKernel.kernel32.CloseHandle(handle)
 
 
