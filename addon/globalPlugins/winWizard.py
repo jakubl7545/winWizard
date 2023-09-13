@@ -426,8 +426,9 @@ class windowWithHandle:
 		# Translators: Text describing hidden window. For example: "Untitled -  notepad from process notepad.exe"
 		return _("{} from process {}").format(self.windowTitle, self.appName)
 
-	def setWindowText(self, text: str) -> int:
-		return winUser.user32.SetWindowTextW(self.handle, text)
+	def setWindowText(self, text: str) -> None:
+		if winUser.user32.SetWindowTextW(self.handle, text) == 0:
+			raise Win32FunctionError
 
 	def canBeHidden(self) -> bool:
 		if self.windowText == "Start":
@@ -609,8 +610,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		def callback(result):
 			if result == wx.ID_OK:
 				newTitle = changeTitleDialog.GetValue()
-				res = w.setWindowText(newTitle)
-				if res == 0:
+				try:
+					w.setWindowText(newTitle)
+				except Win32FunctionError:
 					wx.CallAfter(
 						gui.messageBox,
 						# Translators: Shown when changing of the current window title failed.
