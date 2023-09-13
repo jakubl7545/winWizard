@@ -566,7 +566,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		else:
 			# Translators: Reported when informations for the current window cannot be retrieved.
 			ui.message(_("Can't retrieve window information for this object."))
-			return
 
 	@scriptHandler.script(
 		# Translators: Description of the keyboard command that kills currently focused process.
@@ -611,7 +610,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 						_("Error"),
 						wx.OK | wx.ICON_ERROR
 					)
-					return
 		gui.runScriptModalDialog(changeTitleDialog, callback)
 
 	@scriptHandler.script(
@@ -632,11 +630,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			focusedWindow.hide()
 			playTonesIfEnabled(80, 80)
 			self.hiddenWindowsList[slotNumber] = focusedWindow
+			self.hiddenWindowsList.save()
 		except RuntimeError:
 			# Translators: Message informing user that the current window cannot be hidden.
 			ui.message(_("Cannot hide this window!"))
-			return
-		self.hiddenWindowsList.save()
 
 	def _showFromSlot(self, slotNumber: int) -> None:
 		windowToShow = self.hiddenWindowsList.pop(slotNumber)
@@ -696,11 +693,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		except IndexError:
 			# Translators: Announced when user attempts to show last hidden window but history is empty.
 			ui.message(_("There is no window recorded as last hidden!"))
-			return
 		except RuntimeError:
 			# Translators: Announced when user attempts to show last hidden window but it no longer exists.
 			ui.message(_("Window recorded as last hidden no longer exists!"))
-			return
 
 	@scriptHandler.script(
 		description=_(
@@ -717,4 +712,3 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		else:
 			# Translators: Announced when user tries to display list of hidden windows but there are none hidden.
 			ui.message(_("There are no windows currently hidden."))
-			return
