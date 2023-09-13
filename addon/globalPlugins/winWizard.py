@@ -9,6 +9,7 @@
 from __future__ import annotations
 
 import collections
+import contextlib
 import dataclasses
 import enum
 import os
@@ -16,6 +17,7 @@ import pickle
 import typing
 from typing import (
 	TYPE_CHECKING,
+	Generator,
 )
 
 import globalPluginHandler
@@ -445,6 +447,19 @@ class windowWithHandle:
 			winUser.user32.SetFocus(self.handle)
 
 
+class PROCESS_ACCESS_RIGHTS(enum.IntEnum):
+
+	"""Incomplete, limited only to these we're actually using, list of process access rights.
+
+	Full list is available at:
+	https://learn.microsoft.com/en-us/windows/win32/procthread/process-security-and-access-rights
+	"""
+
+	PROCESS_TERMINATE = 1
+	PROCESS_QUERY_LIMITED_INFORMATION = 0x1000
+	PROCESS_SET_INFORMATION = 0x0200
+
+
 @dataclasses.dataclass
 class Process:
 
@@ -460,26 +475,32 @@ class Process:
 	def from_Focused_process(cls) -> Process:
 		return cls(api.getFocusObject().processID)
 
+	@staticmethod
+	@contextlib.contextmanager
+	def open_handle_with_access_rights(
+			process: Process,
+			access_right: PROCESS_ACCESS_RIGHTS
+	) -> Generator[int, None, None]:
+		handle = winKernel.kernel32.OpenProcess(access_right.value, 0, process.pid)
+		try:
+			yield handle
+		finally:
+			winKernel.kernel32.CloseHandle(handle)
+
 	def kill(self) -> None:
-		PROCESS_TERMINATE = 1
-		handle = winKernel.kernel32.OpenProcess(PROCESS_TERMINATE, 0, self.pid)
-		res = winKernel.kernel32.TerminateProcess(handle, 0)
-		winKernel.kernel32.CloseHandle(handle)
-		if res == 0:
-			raise Win32FunctionError("Failed to kill the process.")
+		with self.open_handle_with_access_rights(self, PROCESS_ACCESS_RIGHTS.PROCESS_TERMINATE) as handle:
+			if winKernel.kernel32.TerminateProcess(handle, 0) == 0:
+				raise Win32FunctionError("Failed to kill the process.")
 
 	def getProcessPriority(self) -> PRIORITIES:
-		PROCESS_QUERY_LIMITED_INFORMATION = 0x1000
-		handle = winKernel.kernel32.OpenProcess(PROCESS_QUERY_LIMITED_INFORMATION, 0, self.pid)
-		res = winKernel.kernel32.GetPriorityClass(handle)
-		winKernel.kernel32.CloseHandle(handle)
-		return PRIORITIES(res)
+		with self.open_handle_with_access_rights(
+			self, PROCESS_ACCESS_RIGHTS.PROCESS_QUERY_LIMITED_INFORMATION
+		) as handle:
+			return PRIORITIES(winKernel.kernel32.GetPriorityClass(handle))
 
 	def setProcessPriority(self, priority_to_set: PRIORITIES) -> None:
-		PROCESS_SET_INFORMATION = 0x0200
-		handle = winKernel.kernel32.OpenProcess(PROCESS_SET_INFORMATION, 0, self.pid)
-		winKernel.kernel32.SetPriorityClass(handle, priority_to_set.value)
-		winKernel.kernel32.CloseHandle(handle)
+		with self.open_handle_with_access_rights(self, PROCESS_ACCESS_RIGHTS.PROCESS_SET_INFORMATION) as handle:
+			winKernel.kernel32.SetPriorityClass(handle, priority_to_set.value)
 
 
 def disableInSecureMode(decoratedCls):
