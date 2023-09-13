@@ -14,6 +14,10 @@ import enum
 import os
 import pickle
 import typing
+from typing import (
+	TYPE_CHECKING,
+)
+
 import globalPluginHandler
 import appModuleHandler
 import addonHandler
@@ -29,6 +33,12 @@ import gui
 import gui.guiHelper
 import gui.settingsDialogs as gsd
 import globalVars
+
+if TYPE_CHECKING:
+	# While these imports are harmless, and can be done at runtime,
+	# they're used only for type annotations, and we use stringified from of type hints anyway.
+	import inputCore
+
 addonHandler.initTranslation()
 
 
@@ -52,6 +62,10 @@ class WinWizardSettingsPanel(gsd.SettingsPanel):
 
 	def onSave(self):
 		config.conf["winWizard"]["playConfirmationBeeps"] = self.enableBeepsChk.GetValue()
+
+
+class Win32FunctionError(Exception):
+	"""Raised when a Win32 function (such as the one for killing processes) fails."""
 
 
 class PRIORITIES(enum.IntEnum):
@@ -160,7 +174,7 @@ class changeProcessPriorityDialog(baseSingletonDialog):
 	# Translators: title of the dialog.
 	title = _("Change process priority")
 
-	def __init__(self, currentProcess: process) -> None:
+	def __init__(self, currentProcess: Process) -> None:
 		self.currentProcess = currentProcess
 		super().__init__()
 		mainSizer = wx.BoxSizer(wx.VERTICAL)
@@ -431,17 +445,28 @@ class windowWithHandle:
 			winUser.user32.SetFocus(self.handle)
 
 
-class process:
+@dataclasses.dataclass
+class Process:
 
-	def __init__(self) -> None:
-		self.pid: int = api.getFocusObject().processID
+	"""Represents a single process in the operating system.
 
-	def kill(self) -> int:
+	It can be either initialized by passing PID of an exisiting process to the initializer,
+	or by using factory method which creates it from the process of the currenty focused window.
+	"""
+
+	pid: int
+
+	@classmethod
+	def from_Focused_process(cls) -> Process:
+		return cls(api.getFocusObject().processID)
+
+	def kill(self) -> None:
 		PROCESS_TERMINATE = 1
 		handle = winKernel.kernel32.OpenProcess(PROCESS_TERMINATE, 0, self.pid)
 		res = winKernel.kernel32.TerminateProcess(handle, 0)
 		winKernel.kernel32.CloseHandle(handle)
-		return res
+		if res == 0:
+			raise Win32FunctionError("Failed to kill the process.")
 
 	def getProcessPriority(self) -> PRIORITIES:
 		PROCESS_QUERY_LIMITED_INFORMATION = 0x1000
@@ -527,13 +552,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		description=_("Kills currently focused process."),
 		gesture="kb:windows+f4",
 	)
-	def script_killProcess(self, gesture):
-		p = process()
-		res = p.kill()
-		if res == 0:
+	def script_killProcess(self, gesture: inputCore.InputGesture) -> None:
+		try:
+			Process.from_Focused_process().kill()
+		except Win32FunctionError:
 			# Translators: Announced when current process cannot be killed.
 			ui.message(_("Cannot kill the current process"))
-			return
 		else:
 			playTonesIfEnabled(90, 80)
 
@@ -578,7 +602,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		gesture="kb:windows+nvda+p",
 	)
 	def script_changeProcessPriority(self, gesture):
-		currentProcess = process()
+		currentProcess = Process.from_Focused_process()
 		wx.CallAfter(changeProcessPriorityDialog.run, currentProcess)
 
 	def _hideInSlot(self, slotNumber: int) -> None:
