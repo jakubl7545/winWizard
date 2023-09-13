@@ -17,6 +17,8 @@ import pickle
 import typing
 from typing import (
 	TYPE_CHECKING,
+	Iterable,
+	Iterator,
 	Generator,
 )
 
@@ -103,27 +105,34 @@ class PRIORITIES(enum.IntEnum):
 		}[self]
 
 
-class stack:
+@dataclasses.dataclass
+class Stack:
 
-	def __init__(self, stackNumber, hiddenInStack):
-		self.stackNumber = stackNumber
-		self.hiddenInStack = hiddenInStack
+	"""Representation of a single stack of hidden windows, used when displaying them in the GUI."""
+
+	stackNumber: int
+	hiddenInStack: Iterable[HiddenWindow]
 
 	def __str__(self) -> str:
 		# Translators: Name of the stack shown in the dialog - for example Stack 1.
 		return _("Stack {}").format(self.stackNumber)
 
 	@property
-	def numbers(self):
+	def numbers(self) -> Iterator[int]:
 		for window in self.hiddenInStack:
 			yield from window.numbers
 
 
-class hiddenWindow:
+@dataclasses.dataclass
+class HiddenWindow:
 
-	def __init__(self, slotNumber, textualRepresentation):
-		self.slotNumber = slotNumber
-		self.textualRepresentation = textualRepresentation
+	"""Stores data about a single hidden window. This is used only in the GUI."""
+
+	slotNumber: int
+	textualRepresentation: str
+	presentationalNumber: int = dataclasses.field(init=False)
+
+	def __post_init__(self) -> None:
 		self.presentationalNumber = self.slotNumber
 		if self.presentationalNumber % 10 == 0:
 			# Slots are internally numbered from 0
@@ -135,7 +144,7 @@ class hiddenWindow:
 		return _("{}: {}").format(self.presentationalNumber, self.textualRepresentation)
 
 	@property
-	def numbers(self):
+	def numbers(self) -> Iterator[int]:
 		yield self.slotNumber
 
 
@@ -382,12 +391,12 @@ class hiddenWindowsList (collections.UserDict):
 				hiddenInCurrentStack = []
 				for windowNumber in numbersInCurrentStack:
 					hiddenInCurrentStack.append(
-						hiddenWindow(
+						HiddenWindow(
 							windowNumber,
 							str(self[windowNumber])
 						)
 					)
-				yield stack(stackNumber, sorted(hiddenInCurrentStack, key=lambda slot: slot.presentationalNumber))
+				yield Stack(stackNumber, sorted(hiddenInCurrentStack, key=lambda slot: slot.presentationalNumber))
 
 
 class windowWithHandle:
