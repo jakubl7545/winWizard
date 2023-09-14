@@ -20,6 +20,7 @@ from typing import (
 	Iterable,
 	Iterator,
 	Generator,
+	Type,
 )
 
 import globalPluginHandler
@@ -323,7 +324,7 @@ class hiddenWindowsList (collections.UserDict):
 				for value in pickle.load(f).values():
 					handle, windowTitle, appName, number = value
 					try:
-						self[number] = windowWithHandle(handle=handle, windowTitle=windowTitle, appName=appName)
+						self[number] = Window(handle=handle, windowTitle=windowTitle, appName=appName)
 					except ValueError:
 						continue
 		except FileNotFoundError:
@@ -399,24 +400,41 @@ class hiddenWindowsList (collections.UserDict):
 				yield Stack(stackNumber, sorted(hiddenInCurrentStack, key=lambda slot: slot.presentationalNumber))
 
 
-class windowWithHandle:
+class Window:
 
-	def __init__(self, handle=None, windowTitle=None, appName=None):
-		if handle:
-			if winUser.isWindow(handle) == 0:
+	"""Stores data about a single window in the operating system.
+
+	The data can be either loaded from a file which stores list of all windows hidden by the user,
+	or the instance can be created based on the currently focused window.
+	When trying to create instance  for a window  whose handle is no longer valid,
+	``ValueError`` is raised.
+	If you want to avoid this check (usefull when you're creating an object from a focused window),
+	`verify_handle_valid` can be set to `False` in the initializer.
+	"""
+
+	def __init__(self, handle: int, windowTitle: str, appName: str, verify_handle_valid: bool = True) -> None:
+		if verify_handle_valid:
+			if not self._handle_valid(handle):
 				raise ValueError("Cannot create object for non existing window")
-			else:
-				self.handle = handle
-				self.windowTitle = windowTitle
-				self.appName = appName
-		else:
-			self.handle = api.getForegroundObject().windowHandle
-			self.windowTitle = api.getForegroundObject().name
-			self.appName = appModuleHandler.getAppNameFromProcessID(api.getForegroundObject().processID, True)
+		self.handle = handle
+		self.windowTitle = windowTitle
+		self.appName = appName
+
+	@classmethod
+	def from_focused_window(cls: Type[Window]) -> Window:  # cls annotated, to avoid VS Code bug
+		return cls(
+			handle=api.getForegroundObject().windowHandle,
+			windowTitle=api.getForegroundObject().name,
+			appName=appModuleHandler.getAppNameFromProcessID(api.getForegroundObject().processID, True),
+			verify_handle_valid=False
+		)
 
 	@property
 	def isAlive(self) -> bool:
-		return bool(winUser.isWindow(self.handle))
+		return self._handle_valid(self.handle)
+
+	def _handle_valid(self, handle: int) -> bool:
+		return bool(winUser.isWindow(handle))
 
 	@property
 	def windowText(self) -> str:
@@ -596,8 +614,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		description=_("Opens a dialog allowing to change title of the current window"),
 		gesture="kb:control+alt+t",
 	)
-	def script_changeTitle(self, gesture):
-		w = windowWithHandle()
+	def script_changeTitle(self, gesture: inputCore.InputGesture) -> None:
+		w = Window.from_focused_window()
 		changeTitleDialog = wx.TextEntryDialog(
 			gui.mainFrame,
 			# Translators: Message in the dialog used to change title of the curently focused window.
@@ -636,7 +654,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		wx.CallAfter(changeProcessPriorityDialog.run, currentProcess)
 
 	def _hideInSlot(self, slotNumber: int) -> None:
-		focusedWindow = windowWithHandle()
+		focusedWindow = Window.from_focused_window()
 		try:
 			focusedWindow.hide()
 			playTonesIfEnabled(80, 80)
