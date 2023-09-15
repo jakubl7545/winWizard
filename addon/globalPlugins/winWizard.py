@@ -14,12 +14,15 @@ import dataclasses
 import enum
 import os
 import pickle
+import weakref
 from typing import (
 	TYPE_CHECKING,
+	ClassVar,
 	Iterable,
 	Iterator,
 	Generator,
 	List,
+	Optional,
 	Type,
 )
 
@@ -151,26 +154,22 @@ class HiddenWindow:
 
 class baseSingletonDialog(wx.Dialog):
 
-	title: str = ""
-	_instance = None
+	title: ClassVar[str] = ""
+	_instance: ClassVar[Optional[weakref.ReferenceType[baseSingletonDialog]]] = None
 
 	def __new__(cls, *args, **kwargs):
-		if cls._instance is None:
+		if not cls._instance or not cls._instance():
+			# Either dialog has never been opened, so the class variable is `None`,
+			# or there is no live reference.
+			# We can continue constructing the object.
 			return super().__new__(cls, *args, **kwargs)
-		return cls._instance
 
 	def __init__(self, *args, **kwargs):
-		if self.__class__._instance is not None:
-			return
-		self.__class__._instance = self
+		self.__class__._instance = weakref.ref(self)
 		super().__init__(parent=gui.mainFrame, title=self.title)
 
 	def onClose(self, evt):
 		self.Destroy()
-		self.__class__._instance = None
-
-	def __del__(self):
-		self.__class__._instance = None
 
 	@classmethod
 	def run(cls, *args, **kwargs):
@@ -231,7 +230,6 @@ class changeProcessPriorityDialog(baseSingletonDialog):
 		priorityToSet = self.priorities.GetSelection()
 		self.currentProcess.setProcessPriority({k: v for v, k in self.priorities_to_indexes.items()}[priorityToSet])
 		self.Destroy()
-		self.__class__._instance = None
 
 
 class unhideWindowDialog(baseSingletonDialog):
@@ -309,7 +307,6 @@ class unhideWindowDialog(baseSingletonDialog):
 			toShow.show()
 		self.hiddenWindowsList.save()
 		self.Destroy()
-		self.__class__._instance = None
 
 
 class hiddenWindowsList (collections.UserDict):
