@@ -14,12 +14,12 @@ import dataclasses
 import enum
 import os
 import pickle
-import typing
 from typing import (
 	TYPE_CHECKING,
 	Iterable,
 	Iterator,
 	Generator,
+	List,
 	Type,
 )
 
@@ -314,22 +314,34 @@ class unhideWindowDialog(baseSingletonDialog):
 
 class hiddenWindowsList (collections.UserDict):
 
+	SAVE_PATH = os.path.join(os.path.abspath(os.path.dirname(__file__)), "hiddenwindows.dat")
+	"""Path to the file storing hidden windows.
+
+	Hidden windows are preserved between NVDA restarts, and even between add-on updates
+	(see the installTasks module for the function which migrates them during update).
+	Name of the file, and its location are kept for historical reasons,
+	so that people who have hidden windows using version of winWizard maintained by Oriol,
+	can update without unhiding all their windows beforehand.
+	The file is expected to be placed in the `globalPlugins` folder - that is why winWizard is not a package,
+	so that we can easily calculate path relative to winWizard's Python file.
+	"""
+
 	def __init__(self, *args, **kwargs):
 		super().__init__(*args, **kwargs)
-		self.savePath = os.path.join(os.path.abspath(os.path.dirname(__file__)), "hiddenwindows.dat")
 		self.currentStack: int = 0
-		self.history: typing.List[int] = list()
-		try:
-			with open(self.savePath, "rb") as f:
+		self.history: List[int] = list()
+		# Load hidden windows from a saved file, if it exists.
+		# If it does not, jjust ignore the error.
+		# The format of the hidden windows list is documented in the docstring of `save` method.
+		with contextlib.suppress(FileNotFoundError):
+			with open(self.SAVE_PATH, "rb") as f:
 				for value in pickle.load(f).values():
 					handle, windowTitle, appName, number = value
 					try:
 						self[number] = Window(handle=handle, windowTitle=windowTitle, appName=appName)
 					except ValueError:
 						continue
-		except FileNotFoundError:
-			pass
-		self.history.clear()
+		self.history.clear()  # Inserting windows from the file didn't preserve order, so there is no history.
 		self.save()
 
 	def __setitem__(self, key, value):
@@ -337,13 +349,21 @@ class hiddenWindowsList (collections.UserDict):
 		super().__setitem__(key, value)
 
 	def __delitem__(self, key):
-		try:
+		with contextlib.suppress(ValueError):  # Occurs when unhiding window from save file, hence no history entry.
 			self.history.remove(key)
-		except ValueError:
-			pass
 		super().__delitem__(key)
 
 	def save(self) -> None:
+		"""Dumps hidden windows to a file.
+
+		Format of the dump is the same as in Oriol's version, to ease migration.
+		The data is dumped as a dictionary, in which key is the slot in which the window was hidden,
+		and the value is a list which contains in order:
+		handle of the window, window's title, name of the application in which the window exists
+		and once again a slot number (the redundancy is to keep compatible with the old format).
+		Note that only valid windows are saved,
+		and when this method is called on an empty list save file is removed.
+		"""
 		fileContent = dict()
 		for slot in list(self.keys()):
 			if self[slot].isAlive:
@@ -352,11 +372,11 @@ class hiddenWindowsList (collections.UserDict):
 				del self[slot]
 		if len(self) == 0:
 			try:
-				os.remove(self.savePath)
+				os.remove(self.SAVE_PATH)
 			except FileNotFoundError:
 				return
 		else:
-			with open(self.savePath, "wb") as f:
+			with open(self.SAVE_PATH, "wb") as f:
 				pickle.dump(fileContent, f)
 
 	def previousStack(self) -> int:
