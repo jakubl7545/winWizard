@@ -4,11 +4,12 @@
 * Compatibilité NVDA : 2019.3 et ultérieurs
 * Télécharger [version stable][1]
 
-This add-on allows you to perform some operations on the focused window or
-the process associated with it.  When killing a process, or showing / hiding
-a window a confirmation beep is played when the action succeeds.  If you
-find this annoying you can disable these beeps in the Win Wizard's settings
-panel available from NVDA's settings dialog.
+Cette extension vous permet d'effectuer certaines opérations sur la fenêtre
+focalisée ou le processus qui lui est associé. Lorsque vous tuez un
+processus ou en affichant / cachant une fenêtre, un bip de confirmation est
+joué lorsque l'action réussit. Si vous trouvez ceci ennuyeux, vous pouvez
+désactiver ces bips dans le panneau de paramètres de Win Wizard disponible
+dans le dialogue des paramètres de NVDA.
 
 ## Commandes clavier :
 Toutes ces commandes peuvent être remappées à partir de la boîte de dialogue
@@ -33,19 +34,19 @@ Gestes de commandes dans la catégorie Win Wizard.
   du processus associé à la fenêtre actuellement focalisée
 
 ### Commandes diverses :
-* NVDA+Windows+TAB - switches between top level windows of the current
-  program (useful in foobar2000, Back4Sure etc.)
+* NVDA+Windows+TAB - bascule entre les fenêtres de niveau supérieur du
+  programme actuel (utile dans foobar2000, Back4Sure etc.)
 * CTRL+ALT+T - vous permet de changer le titre du programme actuellement
   ciblé
 
 ## Changements :
 
-### Changes for 5.0.4:
+### Changements pour la version 5.0.4:
 
-* Compatibility with NVDA 2022.1
-* It is now possible to disable confirmation beeps in the add-ons settings
-  panel
-* Update translations
+* Compatibilité avec NVDA 2022.1
+* Il est désormais possible de désactiver les bips de confirmation dans le
+  panneau de paramètres des extensions
+* Mise à jour des traductions
 
 ### Changements pour la version 5.0.3 :
 
@@ -53,8 +54,8 @@ Gestes de commandes dans la catégorie Win Wizard.
 
 ### Changements pour la version 5.0.2 :
 
-* First release available from the add-ons website
+* Première version disponible sur le site des extensions
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=winwizard
+[1]: https://www.nvaccess.org/addonStore/legacy?file=winwizard

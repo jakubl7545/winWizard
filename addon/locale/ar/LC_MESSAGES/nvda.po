@@ -8,29 +8,27 @@ msgstr ""
 "Project-Id-Version: winWizard 5.0.3\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-22 05:53+0000\n"
-"PO-Revision-Date: 2023-07-28 17:10+0100\n"
-"Last-Translator: Ângelo Abrantes <ampa4374@gmail.com>\n"
-"Language-Team: Equipa Portuguesa do NVDA: Ângelo Abrantes e Rui Fontes\n"
-"Language: pt_PT\n"
+"PO-Revision-Date: 2023-06-13 18:23+0300\n"
+"Last-Translator: Hatoon <h.felemban@hotmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
-"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.6.11\n"
 
 msgid "winWizard"
 msgstr "winWizard"
 
 #. Translators: Label of a checkbox which can be used to enable or disable sounds.
 msgid "&Confirm actions with sounds"
-msgstr "&Confirmar acções com sons"
+msgstr "&تأكيد الإجراء بنغمة صوتية"
 
 #. Translators: Name of the stack shown in the dialog - for example Stack 1.
 #. Translators: Message announced when user switches to another stack.
 #. Translators: Announced when user switches to  another stack.
 msgid "Stack {}"
-msgstr "Empilhar {}"
+msgstr "مجموعة {}"
 
 #. Translators: Text of the  entry for the hidden window in the hidden windows tree.
 msgid "{}: {}"
@@ -38,59 +36,59 @@ msgstr "{}: {}"
 
 #. Translators: title of the dialog.
 msgid "Change process priority"
-msgstr "Mudar as prioridades das alterações de processo"
+msgstr "تغيير مستوى أولوية العملية"
 
 #. Translators: Label for the group of radio buttons for choosing a process priority.
 msgid "Choose priority"
-msgstr "Escolher prioridade"
+msgstr "اختيار مستوى الأولوية"
 
 #. Translators: Label of the button which sets priority in the dialog.
 msgid "Change"
-msgstr "Alterar"
+msgstr "تغيير"
 
 #. Translators: Label for the button which  dismiss the dialog.
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "إلغاء"
 
 #. Translators: Title of the dialog.
 msgid "Hidden windows"
-msgstr "Janelas ocultas"
+msgstr "النوافذ المخفية"
 
 #. Translators: Label for the button which shows currently selected hidden window.
 msgid "Unhide"
-msgstr "Mostrar"
+msgstr "إظهار"
 
 #. Translators: Label for the button which closes the dialog.
 msgid "Close"
-msgstr "Fechar"
+msgstr "إغلاق"
 
 #. Translators: Text describing hidden window. For example: "Untitled -  notepad from process notepad.exe"
 msgid "{} from process {}"
-msgstr "{} do processo {}"
+msgstr "{} تابع للعملية {}"
 
 #. Translators: Name of the process priority
 msgid "Idle"
-msgstr "Ocioso"
+msgstr "خامل"
 
 #. Translators: Name of the process priority
 msgid "Below Normal"
-msgstr "Abaixo do normal"
+msgstr "دون الطبيعي"
 
 #. Translators: Name of the process priority
 msgid "Normal"
-msgstr "Normal"
+msgstr "طبيعي"
 
 #. Translators: Name of the process priority
 msgid "Above normal"
-msgstr "Acima do normal"
+msgstr "فوق الطبيعي"
 
 #. Translators: Name of the process priority
 msgid "High"
-msgstr "Alta"
+msgstr "مرتفعة"
 
 #. Translators: Name of the process priority
 msgid "Real time"
-msgstr "Em tempo real"
+msgstr "الوقت الفعلي"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
@@ -101,107 +99,105 @@ msgstr "Win Wizard"
 #. Translators: Description of the keyboard command
 #. allowing to jump between top-level windows of the current application.
 msgid "Jumps between top-level windows of the current application."
-msgstr "Saltos entre janelas de nível superior da aplicação actual."
+msgstr "القفز بين النوافذ الموجودة في المستوى الذي يعلو التطبيق الحالي."
 
 #. Translators: Information given when user tries to move to top-level window in Windows  Explorer
 msgid "Not supported here."
-msgstr "Sem suporte, aqui."
+msgstr "غير مدعوم هنا."
 
 #. Translators: Announced when the current application has no top-level windows.
 msgid "This window has no top level windows to cycle to."
-msgstr "Esta janela não tem janelas de nível superior a que se possa recorrer."
+msgstr "لا يوجد مستوى أعلى لهذه النافذة للانتقال  إليه."
 
 #. Translators: Announced when current program has multiple top-level windows.
 msgid "Multiple top level windows detected."
-msgstr "Várias janelas de nível superior detectadas."
+msgstr "توجد نوافذ متعددة في المستوى الأعلى."
 
 #. Translators: Reported when informations for the current window cannot be retrieved.
 msgid "Can't retrieve window information for this object."
-msgstr "Não é possível recuperar informações de janela para este objecto."
+msgstr "لا يمكن الحصول على معلومات حول النافذة الخاصة بهذا الكائن."
 
 #. Translators: Description of the keyboard command that kills currently focused process.
 msgid "Kills currently focused process."
-msgstr "Mata o processo actualmente sob o foco."
+msgstr "إنهاء العملية الواقعة في حيز التركيز حاليا."
 
 #. Translators: Announced when current process cannot be killed.
 msgid "Cannot kill the current process"
-msgstr "Não pode matar o processo actual"
+msgstr "يتعذّر إنهاء العملية الحالية"
 
 #. Translators: Description of the keyboard command used to change title of the curently focused window.
 msgid "Opens a dialog allowing to change title of the current window"
-msgstr "Abre um diálogo que permite alterar o título da janela actual"
+msgstr "فتح مربّع حوار يتيح تغيير عنوان النافذة الحالية"
 
 #. Translators: Message in the dialog used to change title of the curently focused window.
 msgid "Enter the new title for this window:"
-msgstr "Escrever o novo título para esta janela:"
+msgstr "أدخِلْ العنوان الجديد لهذه النافذة:"
 
 #. Translators: Title of the dialog.
 msgid "Change window title"
-msgstr "Alterar o título da janela"
+msgstr "تغيير عنوان النافذة"
 
 #. Translators: Shown when changing of the current window title failed.
 msgid "Failed to change window title!"
-msgstr "Falha ao mudar o título da janela!"
+msgstr "تعثُّر تغيير عنوان النافذة!"
 
 #. Translators: Title of the error dialog
 msgid "Error"
-msgstr "Erro"
+msgstr "خطأ"
 
 #. Translators: Description of the keyboard command
 #. that opens dialog allowing to change priority of the currently focused program.
 msgid ""
 "Opens dialog used to change priority of the process of currently focused "
 "program."
-msgstr ""
-"Abre o diálogo utilizado para alterar a prioridade do processo do programa "
-"actualmente sob o foco."
+msgstr "فتح مربّع حوار لضبط مستوى أولوية العملية الخاصة بالبرنامج الحالي."
 
 #. Translators: Message informing user that the current window cannot be hidden.
 msgid "Cannot hide this window!"
-msgstr "Não se pode esconder esta janela!"
+msgstr "لا يمكن إخفاء هذه النافذة!"
 
 #. Translators: Description of the keyboard command that shows or hides window at the current slot.
 msgid "Shows or hides window in the current slot."
-msgstr "Mostra ou oculta a janela na slot actual."
+msgstr "إظهار أو إخفاء النافذة في المنفذ الحالي."
 
 #. Translators: Description of the keyboard command.
 msgid "Goes to the previous stack"
-msgstr "Vai para a pilha anterior"
+msgstr "الانتقال للمجموعة السابقة"
 
 #. Translators: Description of the keyboard command.
 msgid "Goes to the next stack"
-msgstr "Vai para a pilha seguinte"
+msgstr "الانتقال للمجموعة التالية"
 
 #. Translators: Description of the keyboard command.
 msgid "Hides  current window in the first available slot"
-msgstr "Esconde a janela actual na primeira slot disponível"
+msgstr "إخفاء النافذة الحالية في أول منفذ متوفر"
 
 #. Translators: Description of the keyboard command.
 msgid "Shows last hidden window"
-msgstr "Mostra a última janela oculta"
+msgstr "عرض آخر نافذة أُخفيت"
 
 #. Translators: Announced when user attempts to show last hidden window but history is empty.
 msgid "There is no window recorded as last hidden!"
-msgstr "Não há nenhuma janela registada como última escondida!"
+msgstr "لم تُسجَّل نافذةٌ كآخر نافذة أُخفيَت!"
 
 #. Translators: Announced when user attempts to show last hidden window but it no longer exists.
 msgid "Window recorded as last hidden no longer exists!"
-msgstr "A janela registada como última escondida já não existe!"
+msgstr "لم تعُدِ النافذة المسجّلة كآخر نافذة مخفية موجودةً!"
 
 #. Translators: Description of the keyboard command
 #. that opens dialog allowing to unhide currently hidden windows.
 msgid "Opens dialog for unhiding currently hidden windows."
-msgstr "Abre o diálogo para as janelas actualmente ocultas."
+msgstr "عرض مربّع حوار للنوافذ غير المخفية."
 
 #. Translators: Announced when user tries to display list of hidden windows but there are none hidden.
 msgid "There are no windows currently hidden."
-msgstr "Não existem actualmente janelas escondidas."
+msgstr "لا توجد نوافذ مخفيّة حاليا."
 
 msgid ""
 "This addon allows you to hide windows (NVDA shift and numbers).\n"
 "Also, allows exploration of top level windows (windows+NVDA+tab),\n"
 "and kill a non responding process with windows f4."
 msgstr ""
-"Este extra permite-lhe esconder janelas (NVDA shift e números).\n"
-"Também permite explorar janelas de nível superior (windows+NVDA+tab),\n"
-"e matar um processo sem resposta com janelas f4."
+"تُتيح هذه الإضافة إخفاء النوافذ (NVDA shift مع الأرقام).\n"
+"كما تتيح استعراض النوافذ في المستوى الأعلى (windows+NVDA+tab),\n"
+"وكذلك إنهاء العمليات التي لا تستجيب مع windows f4."

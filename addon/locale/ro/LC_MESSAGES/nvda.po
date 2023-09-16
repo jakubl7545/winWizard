@@ -8,29 +8,27 @@ msgstr ""
 "Project-Id-Version: winWizard 5.0.3\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-22 05:53+0000\n"
-"PO-Revision-Date: 2023-07-28 17:10+0100\n"
-"Last-Translator: Ângelo Abrantes <ampa4374@gmail.com>\n"
-"Language-Team: Equipa Portuguesa do NVDA: Ângelo Abrantes e Rui Fontes\n"
-"Language: pt_PT\n"
+"PO-Revision-Date: 2023-06-07 10:45+0300\n"
+"Last-Translator: Florian Ionașcu <florianionascu@hotmail.com>\n"
+"Language-Team: \n"
+"Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
-"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 3.3.1\n"
 
 msgid "winWizard"
 msgstr "winWizard"
 
 #. Translators: Label of a checkbox which can be used to enable or disable sounds.
 msgid "&Confirm actions with sounds"
-msgstr "&Confirmar acções com sons"
+msgstr "Confirmă ac&țiunile cu sunete"
 
 #. Translators: Name of the stack shown in the dialog - for example Stack 1.
 #. Translators: Message announced when user switches to another stack.
 #. Translators: Announced when user switches to  another stack.
 msgid "Stack {}"
-msgstr "Empilhar {}"
+msgstr "Stivă {}"
 
 #. Translators: Text of the  entry for the hidden window in the hidden windows tree.
 msgid "{}: {}"
@@ -38,43 +36,43 @@ msgstr "{}: {}"
 
 #. Translators: title of the dialog.
 msgid "Change process priority"
-msgstr "Mudar as prioridades das alterações de processo"
+msgstr "Modificare prioritate proces"
 
 #. Translators: Label for the group of radio buttons for choosing a process priority.
 msgid "Choose priority"
-msgstr "Escolher prioridade"
+msgstr "Alegeți prioritatea"
 
 #. Translators: Label of the button which sets priority in the dialog.
 msgid "Change"
-msgstr "Alterar"
+msgstr "Modificare"
 
 #. Translators: Label for the button which  dismiss the dialog.
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "Anulare"
 
 #. Translators: Title of the dialog.
 msgid "Hidden windows"
-msgstr "Janelas ocultas"
+msgstr "Ferestre ascunse"
 
 #. Translators: Label for the button which shows currently selected hidden window.
 msgid "Unhide"
-msgstr "Mostrar"
+msgstr "Arată"
 
 #. Translators: Label for the button which closes the dialog.
 msgid "Close"
-msgstr "Fechar"
+msgstr "Închide"
 
 #. Translators: Text describing hidden window. For example: "Untitled -  notepad from process notepad.exe"
 msgid "{} from process {}"
-msgstr "{} do processo {}"
+msgstr "{} din procesul {}"
 
 #. Translators: Name of the process priority
 msgid "Idle"
-msgstr "Ocioso"
+msgstr "Inactiv"
 
 #. Translators: Name of the process priority
 msgid "Below Normal"
-msgstr "Abaixo do normal"
+msgstr "Sub normal"
 
 #. Translators: Name of the process priority
 msgid "Normal"
@@ -82,15 +80,15 @@ msgstr "Normal"
 
 #. Translators: Name of the process priority
 msgid "Above normal"
-msgstr "Acima do normal"
+msgstr "Peste normal"
 
 #. Translators: Name of the process priority
 msgid "High"
-msgstr "Alta"
+msgstr "Ridicat"
 
 #. Translators: Name of the process priority
 msgid "Real time"
-msgstr "Em tempo real"
+msgstr "În timp real"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
@@ -101,51 +99,53 @@ msgstr "Win Wizard"
 #. Translators: Description of the keyboard command
 #. allowing to jump between top-level windows of the current application.
 msgid "Jumps between top-level windows of the current application."
-msgstr "Saltos entre janelas de nível superior da aplicação actual."
+msgstr "Sare între ferestrele de nivel superior ale aplicației curente."
 
 #. Translators: Information given when user tries to move to top-level window in Windows  Explorer
 msgid "Not supported here."
-msgstr "Sem suporte, aqui."
+msgstr "Nu este suportat aici."
 
 #. Translators: Announced when the current application has no top-level windows.
 msgid "This window has no top level windows to cycle to."
-msgstr "Esta janela não tem janelas de nível superior a que se possa recorrer."
+msgstr ""
+"Această fereastră nu are ferestre de nivel superior prin care să treacă."
 
 #. Translators: Announced when current program has multiple top-level windows.
 msgid "Multiple top level windows detected."
-msgstr "Várias janelas de nível superior detectadas."
+msgstr "Au fost detectate ferestre multiple de nivel superior."
 
 #. Translators: Reported when informations for the current window cannot be retrieved.
 msgid "Can't retrieve window information for this object."
-msgstr "Não é possível recuperar informações de janela para este objecto."
+msgstr "Nu pot fi recuperate informațiile ferestrei pentru acest obiect."
 
 #. Translators: Description of the keyboard command that kills currently focused process.
 msgid "Kills currently focused process."
-msgstr "Mata o processo actualmente sob o foco."
+msgstr "Dezactivează procesele focalizate în momentul de față."
 
 #. Translators: Announced when current process cannot be killed.
 msgid "Cannot kill the current process"
-msgstr "Não pode matar o processo actual"
+msgstr "Nu a putut fi dezactivat procesul curent"
 
 #. Translators: Description of the keyboard command used to change title of the curently focused window.
 msgid "Opens a dialog allowing to change title of the current window"
-msgstr "Abre um diálogo que permite alterar o título da janela actual"
+msgstr ""
+"Deschide un dialog care permite modificarea titlului ferestrei curente"
 
 #. Translators: Message in the dialog used to change title of the curently focused window.
 msgid "Enter the new title for this window:"
-msgstr "Escrever o novo título para esta janela:"
+msgstr "Introduceți noul titlu pentru această fereastră:"
 
 #. Translators: Title of the dialog.
 msgid "Change window title"
-msgstr "Alterar o título da janela"
+msgstr "Modificare titlu fereastră"
 
 #. Translators: Shown when changing of the current window title failed.
 msgid "Failed to change window title!"
-msgstr "Falha ao mudar o título da janela!"
+msgstr "Modificarea titlului ferestrei a eșuat!"
 
 #. Translators: Title of the error dialog
 msgid "Error"
-msgstr "Erro"
+msgstr "Eroare"
 
 #. Translators: Description of the keyboard command
 #. that opens dialog allowing to change priority of the currently focused program.
@@ -153,55 +153,57 @@ msgid ""
 "Opens dialog used to change priority of the process of currently focused "
 "program."
 msgstr ""
-"Abre o diálogo utilizado para alterar a prioridade do processo do programa "
-"actualmente sob o foco."
+"Deschide dialogul utilizat la modificarea priorității procesului "
+"programului pe care sunteți focalizat."
 
 #. Translators: Message informing user that the current window cannot be hidden.
 msgid "Cannot hide this window!"
-msgstr "Não se pode esconder esta janela!"
+msgstr "Nu poate fi ascunsă această fereastră!"
 
 #. Translators: Description of the keyboard command that shows or hides window at the current slot.
 msgid "Shows or hides window in the current slot."
-msgstr "Mostra ou oculta a janela na slot actual."
+msgstr "Afișează sau ascunde fereastra din slotul curent."
 
 #. Translators: Description of the keyboard command.
 msgid "Goes to the previous stack"
-msgstr "Vai para a pilha anterior"
+msgstr "Merge la stiva precedentă"
 
 #. Translators: Description of the keyboard command.
 msgid "Goes to the next stack"
-msgstr "Vai para a pilha seguinte"
+msgstr "Merge la stiva următoare"
 
 #. Translators: Description of the keyboard command.
 msgid "Hides  current window in the first available slot"
-msgstr "Esconde a janela actual na primeira slot disponível"
+msgstr "Ascunde fereastra curentă din primul slot disponibil"
 
 #. Translators: Description of the keyboard command.
 msgid "Shows last hidden window"
-msgstr "Mostra a última janela oculta"
+msgstr "Afișează ultima fereastră ascunsă"
 
 #. Translators: Announced when user attempts to show last hidden window but history is empty.
 msgid "There is no window recorded as last hidden!"
-msgstr "Não há nenhuma janela registada como última escondida!"
+msgstr "Nu există nicio fereastră înregistrată ca fiind ultima ascunsă!"
 
 #. Translators: Announced when user attempts to show last hidden window but it no longer exists.
 msgid "Window recorded as last hidden no longer exists!"
-msgstr "A janela registada como última escondida já não existe!"
+msgstr "Nu mai există ferestre înregistrate ca fiind ultimele ascunse!"
 
 #. Translators: Description of the keyboard command
 #. that opens dialog allowing to unhide currently hidden windows.
 msgid "Opens dialog for unhiding currently hidden windows."
-msgstr "Abre o diálogo para as janelas actualmente ocultas."
+msgstr "Deschide dialogul care afișează ferestrele actualmente ascunse."
 
 #. Translators: Announced when user tries to display list of hidden windows but there are none hidden.
 msgid "There are no windows currently hidden."
-msgstr "Não existem actualmente janelas escondidas."
+msgstr "Nu există ferestre ascunse în momentul de față."
 
 msgid ""
 "This addon allows you to hide windows (NVDA shift and numbers).\n"
 "Also, allows exploration of top level windows (windows+NVDA+tab),\n"
 "and kill a non responding process with windows f4."
 msgstr ""
-"Este extra permite-lhe esconder janelas (NVDA shift e números).\n"
-"Também permite explorar janelas de nível superior (windows+NVDA+tab),\n"
-"e matar um processo sem resposta com janelas f4."
+"Acest supliment vă permite să ascundeți ferestre (NVDA shift și "
+"numere).\n"
+"De asemenea, permite explorarea ferestrelor de nivel superior "
+"(windows+NVDA+tab)\n"
+"și dezactivează un proces blocat (windows f4)."
