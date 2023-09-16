@@ -1,6 +1,6 @@
 # Win Wizard
 
-* Author: Oriol Gómez, current maintenance by Łukasz Golonka
+* Author: Oriol Gómez, Łukasz Golonka, current maintenance by Jakub Lukowicz
 * NVDA compatibility: 2019.3 and beyond
 
 This add-on allows you to perform some operations on the focused window or the process associated with it.

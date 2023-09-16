@@ -3,8 +3,9 @@
 # WinWizard add-on for NVDA
 # This file is covered by the GNU General Public License.
 # See the file COPYING.txt for more details.
-# Copyright (C) 2020-2022 Oriol Gomez <ogomez.s92@gmail.com>
-# Currently maintained by Łukasz Golonka <lukasz.golonka@mailbox.org>
+# Copyright (C) 2020-2023 Oriol Gomez <ogomez.s92@gmail.com>
+# Formerly maintained by Łukasz Golonka <lukasz.golonka@mailbox.org>
+# Currently maitained by Jakub Lukowicz <jakubl7545@gmail.com>
 
 from __future__ import annotations
 

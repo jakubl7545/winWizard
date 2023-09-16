@@ -31,7 +31,7 @@ and kill a non responding process with windows f4."""
 	# version
 	"addon_version": "5.0.4",
 	# Author(s)
-	"addon_author": u"Oriol Gomez <ogomez.s92@gmail.com>, Łukasz Golonka <lukasz.golonka@mailbox.org>",
+	"addon_author": u"Oriol Gomez <ogomez.s92@gmail.com>, Łukasz Golonka <lukasz.golonka@mailbox.org>, Jakub Lukowicz <jakubl7545@gmail.com>",
 	# URL for the add-on documentation support
 	"addon_url": "https://github.com/jakubl7545/winWizard",
 	# URL for the add-on repository where the source code can be found
