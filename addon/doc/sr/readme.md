@@ -1,6 +1,6 @@
 # Win Wizard #
 
-* Autor: Oriol Gómez, dodatak trenutno održava Łukasz Golonka
+* Author: Oriol Gómez, Łukasz Golonka, current maintenance by Jakub Lukowicz
 * NVDA kompatibilnost: 2019.3 i noviji
 * Preuzmi [stabilnu verziju ][1]
 
@@ -39,6 +39,11 @@ wizard.
   prozora
 
 ## Promene:
+
+### Changes for 5.0.5:
+
+* Compatibility with NVDA 2023.2
+* Ažurirani prevodi
 
 ### Promene u 5.0.4:
 

@@ -1,6 +1,6 @@
 # Win Wizard #
 
-* Yazar: Oriol Gómez, şu anki kod sahibi Łukasz Golonka
+* Yazar: Oriol Gómez, Łukasz Golonka, güncelleme ve  bakım: Jakub Lukowicz
 * NVDA uyumluluğu: 2019.3 ve üzeri sürümleri
 * İndir [kararlı sürüm][1]
 
@@ -36,6 +36,11 @@ kategorisinden değiştirilebilir.
 * CTRL+ALT+T - üzerinde bulunulan programın pencere başlığını değiştirir
 
 ## Değişiklikler:
+
+### 5.0.5 için değişiklikler:
+
+* NVDA 2023.2 ile uyumlu
+* Çeviriler güncellendi
 
 ### 5.0.4 için değişiklikler:
 

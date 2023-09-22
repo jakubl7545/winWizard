@@ -1,6 +1,6 @@
 # Win Wizard (Майстер вікон) #
 
-* Автор: Oriol Gómez, поточне обслуговування Łukasz Golonka
+* Author: Oriol Gómez, Łukasz Golonka, current maintenance by Jakub Lukowicz
 * Сумісність з NVDA: 2019.3 та новіші
 * Завантажити [стабільну версію][1]
 
@@ -38,6 +38,11 @@ Wizard.
 * CTRL+ALT+T -  дозволяє змінити назву поточної програми у фокусі
 
 ## Зміни:
+
+### Changes for 5.0.5:
+
+* Compatibility with NVDA 2023.2
+* Оновлено переклади.
 
 ### Зміни у версії 5.0.4:
 

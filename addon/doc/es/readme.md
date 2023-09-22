@@ -1,6 +1,7 @@
 # Win Wizard #
 
-* Autor: Oriol Gómez, mantenido actualmente por Łukasz Golonka
+* Autor: Oriol Gómez, Łukasz Golonka, mantenido actualmente por Jakub
+  Lukowicz
 * Compatibilidad con NVDA: 2019.3 y versiones posteriores
 * Descargar [versión estable][1]
 
@@ -38,6 +39,11 @@ en la categoría Win Wizard.
 * Ctrl+alt+t - Permite cambiar el título del programa que tiene el foco
 
 ## Cambios:
+
+### Cambios para 5.0.5:
+
+* Compatibilidad con NVDA 2023.2
+* Traducciones actualizadas
 
 ### Cambios para 5.0.4:
 

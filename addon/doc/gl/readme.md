@@ -1,6 +1,6 @@
 # Win Wizard #
 
-* Autor: Oriol Gómez, mantido actualmente por Łukasz Golonka
+* Author: Oriol Gómez, Łukasz Golonka, current maintenance by Jakub Lukowicz
 * Compatibilidade co NVDA: 2019.3 en diante
 * Descargar [versión estable][1]
 
@@ -35,6 +35,11 @@ categoría Win Wizard.
 * CTRL+ALT+T - permíteche cambiar o título do programa actualmente co foco
 
 ## Trocos:
+
+### Changes for 5.0.5:
+
+* Compatibility with NVDA 2023.2
+* Traducións actualizadas
 
 ### Cambios para 5.0.4:
 

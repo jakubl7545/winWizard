@@ -1,6 +1,6 @@
 # Ikkunavelho #
 
-* Tekijä: Oriol Gómez, nykyinen ylläpitäjä Łukasz Golonka
+* Tekijä: Oriol Gómez, Łukasz Golonka, nykyinen ylläpitäjä Jakub Lukowicz
 * Yhteensopivuus: NVDA 2019.3 tai uudempi
 * Lataa [vakaa versio][1]
 
@@ -36,6 +36,11 @@ Ikkunavelho-kategoriasta.
 * Ctrl+Alt+T: Mahdollistaa aktiivisen ohjelman ikkunan nimen muuttamisen.
 
 ## Muutokset:
+
+### Muutokset versiossa 5.0.5:
+
+* Yhteensopiva NVDA 2023.2:n kanssa
+* Käännöksiä päivitetty
 
 ### Muutokset versiossa 5.0.4:
 

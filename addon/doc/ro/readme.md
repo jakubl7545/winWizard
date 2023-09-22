@@ -1,6 +1,6 @@
 # Win Wizard #
 
-* Author: Oriol Gómez, întreținere curentă de către Łukasz Golonka
+* Author: Oriol Gómez, Łukasz Golonka, current maintenance by Jakub Lukowicz
 * Compatibilitate NVDA: 2019.3 și versiunille ulterioare
 * Descărcaţi [versiunea stabilă][1]
 
@@ -40,6 +40,11 @@ introducere din categoria Win Wizard.
   prezent
 
 ## Modificări:
+
+### Changes for 5.0.5:
+
+* Compatibility with NVDA 2023.2
+* Traduceri actualizate
 
 ### Modificări pentru 5.0.4:
 
