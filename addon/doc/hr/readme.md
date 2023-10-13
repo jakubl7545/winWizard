@@ -1,6 +1,7 @@
 # Win čarobnjak (Win Wizard) #
 
-* Author: Oriol Gómez, Łukasz Golonka, current maintenance by Jakub Lukowicz
+* Autor: Oriol Gómez, Łukasz Golonka, dodatak trenutačno održava Jakub
+  Lukowicz
 * NVDA kompatibilnost: 2019.3 i novije verzije
 * Preuzmi [stablnu verziju][1]
 
@@ -37,9 +38,9 @@ kategoriji Win čarobnjak.
 
 ## Promjene:
 
-### Changes for 5.0.5:
+### Promjene u 5.0.5:
 
-* Compatibility with NVDA 2023.2
+* Kompatibilnost s NVDA 2023.2
 * Aktualizirani prijevodi
 
 ### Promjene u 5.0.4:
