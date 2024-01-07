@@ -8,7 +8,7 @@
 # Currently maitained by Jakub Lukowicz <jakubl7545@gmail.com>
 
 from __future__ import annotations
-
+from logHandler import log
 import collections
 import contextlib
 import dataclasses
@@ -296,6 +296,7 @@ class unhideWindowDialog(baseSingletonDialog):
 			for slotNumber in stack.hiddenInStack:
 				slotInTree = self.windowsTree.AppendItem(stackInTree, str(slotNumber))
 				self.windowsTree.SetItemData(slotInTree, slotNumber)
+				log.info(slotNumber)
 				if self.lastHidden is not None and self.lastHidden == slotNumber.slotNumber:
 					self.lastHidden = None  # No point in checkiing further
 					self.windowsTree.SelectItem(slotInTree)
@@ -754,6 +755,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	)
 	def script_unhideHiddenWindows(self, gesture):
 		self.hiddenWindowsList.save()  # To remove dead windows from the list
+		log.info(len(self.hiddenWindowsList))
 		if len(self.hiddenWindowsList) > 0:
 			wx.CallAfter(unhideWindowDialog.run, self.hiddenWindowsList)
 		else:
