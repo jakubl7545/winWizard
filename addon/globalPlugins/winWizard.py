@@ -296,7 +296,7 @@ class unhideWindowDialog(baseSingletonDialog):
 			for slotNumber in stack.hiddenInStack:
 				slotInTree = self.windowsTree.AppendItem(stackInTree, str(slotNumber))
 				self.windowsTree.SetItemData(slotInTree, slotNumber)
-				log.info(slotNumber)
+				log.info(f'Window added to unhide dialog: {slotNumber}')
 				if self.lastHidden is not None and self.lastHidden == slotNumber.slotNumber:
 					self.lastHidden = None  # No point in checkiing further
 					self.windowsTree.SelectItem(slotInTree)
@@ -404,6 +404,7 @@ class hiddenWindowsList (collections.UserDict):
 			raise RuntimeError("Cannot divide empty list into stacks")
 		else:
 			slotsToStacks = [int(str(slotNumber + 10)[:-1]) for slotNumber in takenSlots]
+			log.info(f'Stacks with hidden windows: {sorted(set(slotsToStacks))}')
 			for stackNumber in sorted(set(slotsToStacks)):
 				numbersInCurrentStack = [
 					slotNumber for slotNumber in takenSlots if int(str(slotNumber + 10)[:-1]) == stackNumber
@@ -416,6 +417,8 @@ class hiddenWindowsList (collections.UserDict):
 							str(self[windowNumber])
 						)
 					)
+				log.info(f'Windows hidden in the same stack: {hiddenInCurrentStack}')
+				log.info(f'Yielded stack number: {Stack(stackNumber, sorted(hiddenInCurrentStack, key=lambda slot: slot.presentationalNumber))}')
 				yield Stack(stackNumber, sorted(hiddenInCurrentStack, key=lambda slot: slot.presentationalNumber))
 
 
@@ -755,7 +758,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	)
 	def script_unhideHiddenWindows(self, gesture):
 		self.hiddenWindowsList.save()  # To remove dead windows from the list
-		log.info(len(self.hiddenWindowsList))
+		log.info(f'Number of hidden windows: {len(self.hiddenWindowsList)}')
 		if len(self.hiddenWindowsList) > 0:
 			wx.CallAfter(unhideWindowDialog.run, self.hiddenWindowsList)
 		else:
