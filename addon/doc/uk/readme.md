@@ -1,6 +1,6 @@
 # Win Wizard (Майстер вікон) #
 
-* Автори: Oriol Gómez, Łukasz Golonka, поточне обслуговування Jakub Lukowicz
+* Author: Oriol Gómez, Łukasz Golonka, current maintenance by Jakub Lukowicz
 * Сумісність з NVDA: 2019.3 та новіші
 * Завантажити [стабільну версію][1]
 

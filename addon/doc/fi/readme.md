@@ -1,6 +1,6 @@
 # Ikkunavelho #
 
-* Tekijä: Oriol Gómez, Łukasz Golonka, nykyinen ylläpitäjä Jakub Lukowicz
+* Author: Oriol Gómez, Łukasz Golonka, current maintenance by Jakub Lukowicz
 * Yhteensopivuus: NVDA 2019.3 tai uudempi
 * Lataa [vakaa versio][1]
 

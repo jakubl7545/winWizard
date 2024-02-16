@@ -1,6 +1,6 @@
 # Win Wizard #
 
-* Yazar: Oriol Gómez, Łukasz Golonka, güncelleme ve  bakım: Jakub Lukowicz
+* Yazar: Oriol Gómez, Łukasz Golonka, güncel bakım: Jakub Lukowicz
 * NVDA uyumluluğu: 2019.3 ve üzeri sürümleri
 * İndir [kararlı sürüm][1]
 

@@ -1,7 +1,6 @@
 # Помощник за прозорците (Win Wizard) #
 
-* Автори: Oriol Gómez, Łukasz Golonka, поддържана към момента от Jakub
-  Lukowicz
+* Author: Oriol Gómez, Łukasz Golonka, current maintenance by Jakub Lukowicz
 * Съвместимост с NVDA: 2019.3 и по-нови версии
 * Изтегляне на [стабилна версия][1]
 

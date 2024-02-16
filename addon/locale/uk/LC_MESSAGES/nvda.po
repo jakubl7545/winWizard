@@ -20,137 +20,170 @@ msgstr ""
 "X-Generator: Poedit 3.2.2\n"
 "X-Poedit-Bookmarks: -1,-1,38,-1,-1,-1,-1,-1,-1,-1\n"
 
+#: addon\globalPlugins\winWizard.py:39
 msgid "winWizard"
 msgstr "winWizard"
 
 #. Translators: Label of a checkbox which can be used to enable or disable sounds.
+#: addon\globalPlugins\winWizard.py:44
 msgid "&Confirm actions with sounds"
 msgstr "&Підтверджувати дії звуковими сигналами"
 
 #. Translators: Name of the stack shown in the dialog - for example Stack 1.
 #. Translators: Message announced when user switches to another stack.
 #. Translators: Announced when user switches to  another stack.
+#: addon\globalPlugins\winWizard.py:71 addon\globalPlugins\winWizard.py:629
+#: addon\globalPlugins\winWizard.py:638
 msgid "Stack {}"
 msgstr "Стек {}"
 
 #. Translators: Text of the  entry for the hidden window in the hidden windows tree.
+#: addon\globalPlugins\winWizard.py:92
 msgid "{}: {}"
 msgstr "{}: {}"
 
 #. Translators: title of the dialog.
+#: addon\globalPlugins\winWizard.py:134
 msgid "Change process priority"
 msgstr "Змінити пріоритет процесу"
 
 #. Translators: Label for the group of radio buttons for choosing a process priority.
+#: addon\globalPlugins\winWizard.py:145
 msgid "Choose priority"
 msgstr "Обрати пріоритет"
 
 #. Translators: Label of the button which sets priority in the dialog.
+#: addon\globalPlugins\winWizard.py:156
 msgid "Change"
 msgstr "Зміна"
 
 #. Translators: Label for the button which  dismiss the dialog.
+#: addon\globalPlugins\winWizard.py:165
 msgid "Cancel"
 msgstr "Скасувати"
 
 #. Translators: Title of the dialog.
+#: addon\globalPlugins\winWizard.py:186
 msgid "Hidden windows"
 msgstr "Приховані вікна"
 
 #. Translators: Label for the button which shows currently selected hidden window.
+#: addon\globalPlugins\winWizard.py:211
 msgid "Unhide"
 msgstr "Показати"
 
 #. Translators: Label for the button which closes the dialog.
+#: addon\globalPlugins\winWizard.py:220
 msgid "Close"
 msgstr "Закрити"
 
 #. Translators: Text describing hidden window. For example: "Untitled -  notepad from process notepad.exe"
+#: addon\globalPlugins\winWizard.py:374
 msgid "{} from process {}"
 msgstr "{} від процесу {}"
 
 #. Translators: Name of the process priority
+#: addon\globalPlugins\winWizard.py:412
 msgid "Idle"
 msgstr "Неактивний"
 
 #. Translators: Name of the process priority
+#: addon\globalPlugins\winWizard.py:417
 msgid "Below Normal"
 msgstr "Нижче норми"
 
 #. Translators: Name of the process priority
+#: addon\globalPlugins\winWizard.py:422
 msgid "Normal"
 msgstr "Нормальний"
 
 #. Translators: Name of the process priority
+#: addon\globalPlugins\winWizard.py:427
 msgid "Above normal"
 msgstr "Вище норми"
 
 #. Translators: Name of the process priority
+#: addon\globalPlugins\winWizard.py:432
 msgid "High"
 msgstr "Високий"
 
 #. Translators: Name of the process priority
+#: addon\globalPlugins\winWizard.py:437
 msgid "Real time"
 msgstr "В реальному часі"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
 #. to be shown on installation and add-on information found in Add-ons Manager.
+#: addon\globalPlugins\winWizard.py:474 buildVars.py:23
 msgid "Win Wizard"
 msgstr "Win Wizard"
 
 #. Translators: Description of the keyboard command
 #. allowing to jump between top-level windows of the current application.
+#: addon\globalPlugins\winWizard.py:493
 msgid "Jumps between top-level windows of the current application."
 msgstr "Переходить між вікнами верхнього рівня поточної програми."
 
 #. Translators: Information given when user tries to move to top-level window in Windows  Explorer
+#: addon\globalPlugins\winWizard.py:507
 msgid "Not supported here."
 msgstr "Тут не підтримується."
 
 #. Translators: Announced when the current application has no top-level windows.
+#: addon\globalPlugins\winWizard.py:516
 msgid "This window has no top level windows to cycle to."
 msgstr ""
 "У цьому вікні немає вікон верхнього рівня, до яких можна переходити."
 
 #. Translators: Announced when current program has multiple top-level windows.
+#: addon\globalPlugins\winWizard.py:524
 msgid "Multiple top level windows detected."
 msgstr "Виявлено декілька вікон верхнього рівня."
 
 #. Translators: Reported when informations for the current window cannot be retrieved.
+#: addon\globalPlugins\winWizard.py:527
 msgid "Can't retrieve window information for this object."
 msgstr "Не вдається отримати інформацію про вікно для цього об’єкта."
 
 #. Translators: Description of the keyboard command that kills currently focused process.
+#: addon\globalPlugins\winWizard.py:532
 msgid "Kills currently focused process."
 msgstr "Припиняє поточний сфокусований процес."
 
 #. Translators: Announced when current process cannot be killed.
+#: addon\globalPlugins\winWizard.py:540
 msgid "Cannot kill the current process"
 msgstr "Неможливо припинити поточний процес"
 
 #. Translators: Description of the keyboard command used to change title of the curently focused window.
+#: addon\globalPlugins\winWizard.py:547
 msgid "Opens a dialog allowing to change title of the current window"
 msgstr "Відкриває діалог, в якому можна змінити назву поточного вікна"
 
 #. Translators: Message in the dialog used to change title of the curently focused window.
+#: addon\globalPlugins\winWizard.py:555
 msgid "Enter the new title for this window:"
 msgstr "Введіть нову назву для цього вікна:"
 
 #. Translators: Title of the dialog.
+#: addon\globalPlugins\winWizard.py:557
 msgid "Change window title"
 msgstr "Змінити назву вікна"
 
 #. Translators: Shown when changing of the current window title failed.
+#: addon\globalPlugins\winWizard.py:569
 msgid "Failed to change window title!"
 msgstr "Не вдалося змінити назву вікна!"
 
 #. Translators: Title of the error dialog
+#: addon\globalPlugins\winWizard.py:571
 msgid "Error"
 msgstr "Помилка"
 
 #. Translators: Description of the keyboard command
 #. that opens dialog allowing to change priority of the currently focused program.
+#: addon\globalPlugins\winWizard.py:581
 msgid ""
 "Opens dialog used to change priority of the process of currently focused "
 "program."
@@ -159,46 +192,57 @@ msgstr ""
 "поточної програми."
 
 #. Translators: Message informing user that the current window cannot be hidden.
+#: addon\globalPlugins\winWizard.py:597
 msgid "Cannot hide this window!"
 msgstr "Неможливо приховати це вікно!"
 
 #. Translators: Description of the keyboard command that shows or hides window at the current slot.
+#: addon\globalPlugins\winWizard.py:612
 msgid "Shows or hides window in the current slot."
 msgstr "Показує або приховує вікно в поточному слоті."
 
 #. Translators: Description of the keyboard command.
+#: addon\globalPlugins\winWizard.py:624
 msgid "Goes to the previous stack"
 msgstr "Перехід до попереднього стека"
 
 #. Translators: Description of the keyboard command.
+#: addon\globalPlugins\winWizard.py:633
 msgid "Goes to the next stack"
 msgstr "Перехід до наступного стека"
 
 #. Translators: Description of the keyboard command.
+#: addon\globalPlugins\winWizard.py:642
 msgid "Hides  current window in the first available slot"
 msgstr "Приховує поточне вікно в першому доступному слоті"
 
 #. Translators: Description of the keyboard command.
+#: addon\globalPlugins\winWizard.py:650
 msgid "Shows last hidden window"
 msgstr "Показує останнє приховане вікно"
 
 #. Translators: Announced when user attempts to show last hidden window but history is empty.
+#: addon\globalPlugins\winWizard.py:658
 msgid "There is no window recorded as last hidden!"
 msgstr "Немає вікна, записаного як останнє приховане!"
 
 #. Translators: Announced when user attempts to show last hidden window but it no longer exists.
+#: addon\globalPlugins\winWizard.py:662
 msgid "Window recorded as last hidden no longer exists!"
 msgstr "Вікна, записаного як останнє приховане, більше не існує!"
 
 #. Translators: Description of the keyboard command
 #. that opens dialog allowing to unhide currently hidden windows.
+#: addon\globalPlugins\winWizard.py:669
 msgid "Opens dialog for unhiding currently hidden windows."
 msgstr "Відкриває діалог для показу прихованих вікон."
 
 #. Translators: Announced when user tries to display list of hidden windows but there are none hidden.
+#: addon\globalPlugins\winWizard.py:679
 msgid "There are no windows currently hidden."
 msgstr "Зараз немає прихованих вікон."
 
+#: buildVars.py:27
 msgid ""
 "This addon allows you to hide windows (NVDA shift and numbers).\n"
 "Also, allows exploration of top level windows (windows+NVDA+tab),\n"

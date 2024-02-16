@@ -1,7 +1,6 @@
 # Win čarobnjak (Win Wizard) #
 
-* Autor: Oriol Gómez, Łukasz Golonka, dodatak trenutačno održava Jakub
-  Lukowicz
+* Author: Oriol Gómez, Łukasz Golonka, current maintenance by Jakub Lukowicz
 * NVDA kompatibilnost: 2019.3 i novije verzije
 * Preuzmi [stablnu verziju][1]
 
