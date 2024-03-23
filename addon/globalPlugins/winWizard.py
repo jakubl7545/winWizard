@@ -9,6 +9,7 @@
 
 from __future__ import annotations
 
+from logHandler import log
 import collections
 import contextlib
 import dataclasses
@@ -296,6 +297,7 @@ class unhideWindowDialog(baseSingletonDialog):
 			for slotNumber in stack.hiddenInStack:
 				slotInTree = self.windowsTree.AppendItem(stackInTree, str(slotNumber))
 				self.windowsTree.SetItemData(slotInTree, slotNumber)
+				log.debug(f'Window added to unhide dialog: {slotNumber}')
 				if self.lastHidden is not None and self.lastHidden == slotNumber.slotNumber:
 					self.lastHidden = None  # No point in checkiing further
 					self.windowsTree.SelectItem(slotInTree)
@@ -403,7 +405,9 @@ class hiddenWindowsList (collections.UserDict):
 			raise RuntimeError("Cannot divide empty list into stacks")
 		else:
 			slotsToStacks = [int(str(slotNumber + 10)[:-1]) for slotNumber in takenSlots]
-			for stackNumber in sorted(set(slotsToStacks)):
+			stacksWithHiddenWindows  = sorted(set(slotsToStacks))
+			log.debug(f'Stacks with hidden windows: {stacksWithHiddenWindows}')
+			for stackNumber in stacksWithHiddenWindows:
 				numbersInCurrentStack = [
 					slotNumber for slotNumber in takenSlots if int(str(slotNumber + 10)[:-1]) == stackNumber
 				]
@@ -415,7 +419,10 @@ class hiddenWindowsList (collections.UserDict):
 							str(self[windowNumber])
 						)
 					)
-				yield Stack(stackNumber, sorted(hiddenInCurrentStack, key=lambda slot: slot.presentationalNumber))
+				log.debug(f'Windows hidden in the same stack: {hiddenInCurrentStack}')
+				yieldedStackNumber = Stack(stackNumber, sorted(hiddenInCurrentStack, key=lambda slot: slot.presentationalNumber))
+				log.debug(f'Yielded stack number: {yieldedStackNumber}')
+				yield yieldedStackNumber
 
 
 class Window:
@@ -754,6 +761,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	)
 	def script_unhideHiddenWindows(self, gesture):
 		self.hiddenWindowsList.save()  # To remove dead windows from the list
+		log.debug(f'Number of hidden windows: {len(self.hiddenWindowsList)}')
 		if len(self.hiddenWindowsList) > 0:
 			wx.CallAfter(unhideWindowDialog.run, self.hiddenWindowsList)
 		else:
