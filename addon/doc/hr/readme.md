@@ -1,6 +1,6 @@
 # Win čarobnjak (Win Wizard) #
 
-* Autor: Oriol Gómez, dodatak trenutačno održava Łukasz Golonka
+* Author: Oriol Gómez, Łukasz Golonka, current maintenance by Jakub Lukowicz
 * NVDA kompatibilnost: 2019.3 i novije verzije
 * Preuzmi [stablnu verziju][1]
 
@@ -36,6 +36,11 @@ kategoriji Win čarobnjak.
 * CTRL+ALT+T – omogućuje mijenjanje naslova trenutačno fokusiranog programa
 
 ## Promjene:
+
+### Promjene u 5.0.5:
+
+* Kompatibilnost s NVDA 2023.2
+* Aktualizirani prijevodi
 
 ### Promjene u 5.0.4:
 

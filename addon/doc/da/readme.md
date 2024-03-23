@@ -1,6 +1,6 @@
 # WinWizard #
 
-* Forfatter: Oriol Gómez, vedligeholdes i øjeblikket af Łukasz Golonka
+* Author: Oriol Gómez, Łukasz Golonka, current maintenance by Jakub Lukowicz
 * NVDA-kompatibilitet: 2019.3 og derefter
 * Download [stabil version][1]
 
@@ -41,6 +41,11 @@ under kategorien "Win Wizard".
   fokuserede program
 
 ## Ændringer
+
+### Changes for 5.0.5:
+
+* Compatibility with NVDA 2023.2
+* Opdateret oversættelser
 
 ### Ændringer for 5.0.4:
 

@@ -1,6 +1,7 @@
 # Win Wizard #
 
-* Auteur : Oriol Gómez, maintenance actuelle par Łukasz Golonka
+* Auteur : Oriol Gómez, Łukasz Golonka, maintenance actuelle par Jakub
+  Lukowicz
 * Compatibilité NVDA : 2019.3 et ultérieurs
 * Télécharger [version stable][1]
 
@@ -40,6 +41,11 @@ Gestes de commandes dans la catégorie Win Wizard.
   ciblé
 
 ## Changements :
+
+### Changements pour la version 5.0.5:
+
+* Compatibilité avec NVDA 2023.2
+* Mise à jour des traductions
 
 ### Changements pour la version 5.0.4:
 
