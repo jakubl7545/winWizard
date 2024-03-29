@@ -40,6 +40,11 @@ en la categoría Win Wizard.
 
 ## Cambios:
 
+### Cambios para 5.0.6:
+
+* Compatibilidad con NVDA 2024.1
+* Traducciones actualizadas
+
 ### Cambios para 5.0.5:
 
 * Compatibilidad con NVDA 2023.2

@@ -37,6 +37,11 @@ kategoriji Win čarobnjak.
 
 ## Promjene:
 
+### Changes for 5.0.6:
+
+* Compatibility with NVDA 2024.1
+* Aktualizirani prijevodi
+
 ### Promjene u 5.0.5:
 
 * Kompatibilnost s NVDA 2023.2

@@ -37,6 +37,11 @@ kategorisinden değiştirilebilir.
 
 ## Değişiklikler:
 
+### 5.0.6 için değişiklikler:
+
+* NVDA 2024.1 ile uyumluluk
+* Çeviriler güncellendi
+
 ### 5.0.5 için değişiklikler:
 
 * NVDA 2023.2 ile uyumlu

@@ -41,6 +41,11 @@ Alle diese Befehle können im Dialogfeld für Tastenebefehle in der Kategorie
 
 ## Änderungen:
 
+### Changes for 5.0.6:
+
+* Compatibility with NVDA 2024.1
+* Übersetzungen aktualisiert
+
 ### Changes for 5.0.5:
 
 * Compatibility with NVDA 2023.2

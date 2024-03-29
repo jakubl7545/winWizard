@@ -31,6 +31,11 @@ panel available from NVDA's settings dialog.
 
 ## 更新：
 
+### Changes for 5.0.6:
+
+* Compatibility with NVDA 2024.1
+* Update translations
+
 ### Changes for 5.0.5:
 
 * Compatibility with NVDA 2023.2

@@ -40,6 +40,11 @@ wizard.
 
 ## Promene:
 
+### Changes for 5.0.6:
+
+* Compatibility with NVDA 2024.1
+* Ažurirani prevodi
+
 ### Changes for 5.0.5:
 
 * Compatibility with NVDA 2023.2

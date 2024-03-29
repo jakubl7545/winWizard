@@ -41,6 +41,11 @@ introducere din categoria Win Wizard.
 
 ## Modificări:
 
+### Changes for 5.0.6:
+
+* Compatibility with NVDA 2024.1
+* Traduceri actualizate
+
 ### Changes for 5.0.5:
 
 * Compatibility with NVDA 2023.2

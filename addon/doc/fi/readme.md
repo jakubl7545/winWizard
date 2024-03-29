@@ -39,6 +39,11 @@ Ikkunavelho-kategoriasta.
 
 ## Muutokset:
 
+### Muutokset versiossa 5.0.6:
+
+* Yhteensopiva NVDA 2024.1:n kanssa
+* Käännöksiä päivitetty
+
 ### Muutokset versiossa 5.0.5:
 
 * Yhteensopiva NVDA 2023.2:n kanssa
