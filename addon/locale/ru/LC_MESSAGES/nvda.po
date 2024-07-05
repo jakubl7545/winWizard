@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: winWizard 5.0.3\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-07-22 05:53+0000\n"
-"PO-Revision-Date: 2024-05-08 08:38+0300\n"
-"Last-Translator: zvonimir stanecic <zvonimirek222@yandex.com>\n"
-"Language-Team: \n"
-"Language: ru\n"
+"PO-Revision-Date: 2024-07-04 13:04+0300\n"
+"Last-Translator: Ruslan Kolodyazhni <rupelodn@gmail.com>\n"
+"Language-Team: Translators <nvda-translations@groups.io>\n"
+"Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,7 +22,7 @@ msgstr "win Wizard"
 
 #. Translators: Label of a checkbox which can be used to enable or disable sounds.
 msgid "&Confirm actions with sounds"
-msgstr "&Звуковая индекация Подтверждения действий"
+msgstr "&Звуковая индикация Подтверждения действий"
 
 #. Translators: Name of the stack shown in the dialog - for example Stack 1.
 #. Translators: Message announced when user switches to another stack.
@@ -119,11 +119,11 @@ msgstr "Не удаётся получить сведения об окне дл
 
 #. Translators: Description of the keyboard command that kills currently focused process.
 msgid "Kills currently focused process."
-msgstr "Отключает текущий процес в фокусе."
+msgstr "Завершает текущий процес в фокусе."
 
 #. Translators: Announced when current process cannot be killed.
 msgid "Cannot kill the current process"
-msgstr "Не удаётся отключить текущий процесс"
+msgstr "Не удаётся завершить текущий процесс"
 
 #. Translators: Description of the keyboard command used to change title of the curently focused window.
 msgid "Opens a dialog allowing to change title of the current window"
@@ -187,7 +187,7 @@ msgstr "Окно, записанное как последнее скрытое,
 #. Translators: Description of the keyboard command
 #. that opens dialog allowing to unhide currently hidden windows.
 msgid "Opens dialog for unhiding currently hidden windows."
-msgstr "Открывает диалог просмотра скрытых в данный момент окон."
+msgstr "Открывает диалог для отображения скрытых в данный момент окон."
 
 #. Translators: Announced when user tries to display list of hidden windows but there are none hidden.
 msgid "There are no windows currently hidden."
@@ -201,4 +201,4 @@ msgstr ""
 "Это дополнение позволяет скрывать окна (NVDA +shift +клавиши-цифры).\n"
 "Кроме того, позволяет просматривать окна верхнего уровня (windows+ NVDA + "
 "tab)\n"
-"и отключать не отвечающий процесс с помощью Windows f4."
+"и завершать не отвечающий процесс с помощью Windows f4."
