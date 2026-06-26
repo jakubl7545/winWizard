@@ -35,7 +35,6 @@ import config
 import ui
 import scriptHandler
 import api
-import winKernel
 import winUser
 import tones
 import wx
@@ -43,6 +42,7 @@ import gui
 import gui.guiHelper
 import gui.settingsDialogs as gsd
 import globalVars
+from winBindings.kernel32 import dll as kernel32
 
 if TYPE_CHECKING:
 	# While these imports are harmless, and can be done at runtime,
@@ -541,26 +541,26 @@ class Process:
 			process: Process,
 			access_right: PROCESS_ACCESS_RIGHTS
 	) -> Generator[int, None, None]:
-		handle = winKernel.kernel32.OpenProcess(access_right.value, 0, process.pid)
+		handle = kernel32.OpenProcess(access_right.value, 0, process.pid)
 		try:
 			yield handle
 		finally:
-			winKernel.kernel32.CloseHandle(handle)
+			kernel32.CloseHandle(handle)
 
 	def kill(self) -> None:
 		with self.open_handle_with_access_rights(self, PROCESS_ACCESS_RIGHTS.PROCESS_TERMINATE) as handle:
-			if winKernel.kernel32.TerminateProcess(handle, 0) == 0:
+			if kernel32.TerminateProcess(handle, 0) == 0:
 				raise Win32FunctionError("Failed to kill the process.")
 
 	def getProcessPriority(self) -> PRIORITIES:
 		with self.open_handle_with_access_rights(
 			self, PROCESS_ACCESS_RIGHTS.PROCESS_QUERY_LIMITED_INFORMATION
 		) as handle:
-			return PRIORITIES(winKernel.kernel32.GetPriorityClass(handle))
+			return PRIORITIES(kernel32.GetPriorityClass(handle))
 
 	def setProcessPriority(self, priority_to_set: PRIORITIES) -> None:
 		with self.open_handle_with_access_rights(self, PROCESS_ACCESS_RIGHTS.PROCESS_SET_INFORMATION) as handle:
-			winKernel.kernel32.SetPriorityClass(handle, priority_to_set.value)
+			kernel32.SetPriorityClass(handle, priority_to_set.value)
 
 
 def disableInSecureMode(decoratedCls):
